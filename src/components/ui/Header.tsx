@@ -5,6 +5,7 @@ export const Header = () => {
             <p className="flex-initial w-32">About</p>
             <p className="flex-initial w-32">Portfolio</p>
             <p className="flex-initial w-32">Content</p>
+            <p className="flex-initial w-32">Test</p>
         </div>
     )
 }
