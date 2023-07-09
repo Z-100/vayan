@@ -9,7 +9,7 @@ html, body {
 }
 
 .sidebar {
-    width: 60px;
+    width: 50px;
     min-height: 100vh;
     background-color: theme('colors.neutral-secondary');
     padding: 20px;
