@@ -9,7 +9,7 @@ html, body {
 }
 
 .sidebar {
-    width: 50px;
+    width: 60px;
     min-height: 100vh;
     background-color: theme('colors.neutral-secondary');
     padding: 20px;
@@ -44,7 +44,7 @@ html, body {
 }
 
 .sidebar-item-icon {
-    margin-right: 5px;
+    /*margin-right: 5px;*/
 }
 
 .sidebar-item-text {
@@ -55,4 +55,9 @@ html, body {
 
 .sidebar:hover .sidebar-item-text {
     opacity: 1;
+}
+
+.sidebar:hover .sidebar-item-icon {
+    opacity: 1;
+    margin-right: 10px;
 }

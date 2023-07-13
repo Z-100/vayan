@@ -1,27 +1,29 @@
 import {
-    WelcomePage,
-    SideBar,
-    AboutPage,
-    ContactPage,
+    Router,
+    SideBar
 } from './components';
-import React from 'react';
+import React, {useState} from 'react';
 import {
     BrowserRouter,
-    Route,
-    Routes
 } from 'react-router-dom';
 
 function App() {
+
+    const [darkMode, setDarkMode] = useState(true)
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode)
+        console.log(darkMode)
+    }
+
     return (
         <>
             <BrowserRouter>
-                <SideBar />
-                <Routes>
-                    <Route path="/" element={<WelcomePage/>}/>
-                    <Route path="/about" element={<AboutPage/>}/>
-                    <Route path="/latest" element={<WelcomePage/>}/>
-                    <Route path="/contact" element={<ContactPage/>}/>
-                </Routes>
+                <SideBar
+                    darkMode={darkMode}
+                    toggleDarkMode={toggleDarkMode}
+                />
+                <Router/>
             </BrowserRouter>
         </>
     );
