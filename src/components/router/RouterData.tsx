@@ -1,35 +1,50 @@
 import {RouterType} from "../../models";
 import React from "react";
 import {
-    AboutPage, ContactPage, LatestProjectsPage, PortfolioPage,
+    AboutPage,
+    ContactPage,
+    LatestProjectsPage,
+    PortfolioPage,
     WelcomePage
 } from "../../pages";
+import {
+    BiConversation,
+    BiHomeHeart,
+    BiMeteor,
+    BiStreetView,
+    BiTable
+} from "react-icons/bi";
 
 const routerData: RouterType[] = [
     {
         path: "/",
         element: <WelcomePage/>,
-        title: "Welcome"
+        title: "Welcome",
+        icon: BiHomeHeart,
     },
     {
         path: "/about",
         element: <AboutPage/>,
-        title: "About"
+        title: "About",
+        icon: BiStreetView,
     },
     {
         path: "/contact",
         element: <ContactPage/>,
-        title: "Contact"
+        title: "Contact",
+        icon: BiMeteor,
     },
     {
         path: "/latest-projects",
         element: <LatestProjectsPage/>,
-        title: "Latest Projects"
+        title: "Latest Projects",
+        icon: BiConversation,
     },
     {
         path: "/portfolio",
         element: <PortfolioPage/>,
-        title: "Portfolio"
+        title: "Portfolio",
+        icon: BiTable,
     },
 ]
 

@@ -1,3 +1,4 @@
+import React from 'react'
 import {sidebarContent} from '../../models'
 import {Link} from 'react-router-dom'
 import {ToggleSwitch} from "../common";
@@ -25,10 +26,8 @@ export const SideBar = ({ darkMode, toggleDarkMode }: SideBarProps) => {
                     ))}
                 </div>
             ))}
-            <div onClick={() => toggleDarkMode}>
-                <ToggleSwitch
-
-                />
+            <div>
+                <ToggleSwitch fun={toggleDarkMode}/>
             </div>
         </nav>
     )

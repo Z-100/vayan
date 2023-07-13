@@ -1,5 +1,9 @@
+import React from 'react'
 import routerData from "./RouterData";
-import {Route, Routes} from "react-router-dom";
+import {
+    Route,
+    Routes
+} from "react-router-dom";
 
 export const Router = () => {
 
