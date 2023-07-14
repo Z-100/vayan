@@ -1,11 +1,12 @@
+import React, {useState} from 'react';
+import './App.css'
+import {
+    BrowserRouter,
+} from 'react-router-dom';
 import {
     Router,
     SideBar
 } from './components';
-import React, {useState} from 'react';
-import {
-    BrowserRouter,
-} from 'react-router-dom';
 
 function App() {
 

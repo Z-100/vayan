@@ -1,3 +1,5 @@
+import React from 'react'
+
 /**
  * Maybe change to component and add to footer
  */

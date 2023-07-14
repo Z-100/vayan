@@ -3,7 +3,9 @@ module.exports = {
     content: [
         './src/components/**/*.{ts,tsx}',
         './src/*.{ts,tsx}',
+        './src/'
     ],
+    darkMode: 'class',
     theme: {
         colors: {
             'primary': '#a991f7',
