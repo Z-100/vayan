@@ -1,7 +1,8 @@
 import React from 'react'
-import {sidebarContent} from '../../models'
+import {RouteGroup} from '../../models'
 import {Link} from 'react-router-dom'
 import {ToggleSwitch} from "../common";
+import routerData from "../router/RouterData";
 
 interface SideBarProps {
     darkMode: boolean,
@@ -10,19 +11,29 @@ interface SideBarProps {
 
 export const SideBar = ({ darkMode, toggleDarkMode }: SideBarProps) => {
 
+    const groups: Record<RouteGroup, string> = {
+        [RouteGroup.GENERAL]: RouteGroup.GENERAL,
+        [RouteGroup.PERSONAL]: RouteGroup.PERSONAL,
+        [RouteGroup.PROJECTS]: RouteGroup.PROJECTS,
+        [RouteGroup.ADDITIONAL]: RouteGroup.ADDITIONAL,
+    }
+
     return ( // w-16 bg-neutral-secondary p-2 box-border overflow-hidden transition-all hover:w-52
         <nav className="sidebar">
-            {sidebarContent.map((sidebarGroup, index) => (
-                <div className="sidebar-group" key={sidebarGroup.id}>
-                    {sidebarGroup.items.map((item, itemIndex) => (
-                        <Link
-                            to={item.destination}
-                            className="sidebar-item"
-                            key={item.id}
-                        >
-                            <div className="sidebar-item-icon">{<item.icon/>}</div>
-                            <span className="sidebar-item-text">{item.text}</span>
-                        </Link>
+            {Object.values(groups).map(group => (
+                <div className="sidebar-group" key={group.toString()}>
+                    {routerData.map(route => (
+                        route.group === group ? (
+                            <Link
+                                to={route.path}
+                                className="sidebar-item"
+                                key={route.title}
+                            >
+                                <div className="sidebar-item-icon">{<route.icon/>}</div>
+                                <span className="sidebar-item-text">{route.title}</span>
+                            </Link>
+                            )
+                        : undefined
                     ))}
                 </div>
             ))}

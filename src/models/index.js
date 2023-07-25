@@ -1,2 +1,3 @@
 export * from './temp-consts'
-export * from './RouterType'
+export * from './RouteType'
+export * from './RouteGroup'
