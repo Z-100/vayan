@@ -1,7 +1,10 @@
 import React from 'react'
 import {RouteGroup} from '../../models'
 import {Link} from 'react-router-dom'
-import {ToggleSwitch} from "../common";
+import {
+    CheckEnvironment,
+    ToggleSwitch
+} from "../common";
 import routerData from "../router/RouterData";
 
 interface SideBarProps {
@@ -22,6 +25,7 @@ export const SideBar = ({ darkMode, toggleDarkMode }: SideBarProps) => {
         <nav className="sidebar">
             {Object.values(groups).map(group => (
                 <div className="sidebar-group" key={group.toString()}>
+                    <CheckEnvironment component={<p>{group}</p>} />
                     {routerData.map(route => (
                         route.group === group ? (
                             <Link
