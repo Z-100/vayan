@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const Header = () => {
     return(
         <div className="flex flex-col justify-evenly align-baseline">
