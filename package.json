@@ -28,7 +28,7 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.4",
     "@types/aos": "^3.0.4",
-    "@types/react": "^18.2.14",
+    "@types/react": "^18.2.18",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
     "postcss-cli": "^10.1.0",
