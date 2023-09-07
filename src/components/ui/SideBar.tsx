@@ -8,20 +8,20 @@ interface SideBarProps {
     toggleDarkMode: () => void
 }
 
-export const SideBar = ({ darkMode, toggleDarkMode }: SideBarProps) => {
+export const SideBar = ({darkMode, toggleDarkMode}: SideBarProps) => {
 
-    return ( // w-16 bg-neutral-secondary p-2 box-border overflow-hidden transition-all hover:w-52
-        <nav className="sidebar">
+    return (
+        <nav className="z-50 items-center group w-16 min-h-screen bg-neutral-secondary p-5 box-border text-base-100 overflow-hidden transition-all duration-700 ease-in-out fixed hover:w-72 dark:bg-light-neutral-secondary">
             {sidebarContent.map((sidebarGroup, index) => (
-                <div className="sidebar-group" key={sidebarGroup.id}>
+                <div className="mb-2 pb-2 border-b border-white" key={sidebarGroup.id}>
                     {sidebarGroup.items.map((item, itemIndex) => (
                         <Link
                             to={item.destination}
-                            className="sidebar-item"
+                            className="flex items-center my-3 h-12 text-xl rounded-lg transition-colors duration-500 ease-in-out hover:bg-gray-500 hover:bg-opacity-50 space-x-2"
                             key={item.id}
                         >
-                            <div className="sidebar-item-icon">{<item.icon/>}</div>
-                            <span className="sidebar-item-text">{item.text}</span>
+                            <div className="flex justify-center text-3xl">{<item.icon/>}</div>
+                            <span className="opacity-0 whitespace-nowrap transition-opacity duration-200 ease-in-out group-hover:opacity-100">{item.text}</span>
                         </Link>
                     ))}
                 </div>

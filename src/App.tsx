@@ -13,18 +13,27 @@ function App() {
     const [darkMode, setDarkMode] = useState(true)
 
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode)
-        console.log(darkMode)
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            setDarkMode(false)
+        } else {
+            document.documentElement.classList.add('dark');
+            setDarkMode(true)
+        }
     }
 
     return (
         <>
             <BrowserRouter>
-                <SideBar
-                    darkMode={darkMode}
-                    toggleDarkMode={toggleDarkMode}
-                />
-                <Router/>
+                <div className="flex flex-row bg-primary dark:bg-light-primary">
+                    <SideBar
+                        darkMode={darkMode}
+                        toggleDarkMode={toggleDarkMode}
+                    />
+                    <div className="ml-16">
+                        <Router />
+                    </div>
+                </div>
             </BrowserRouter>
         </>
     );
