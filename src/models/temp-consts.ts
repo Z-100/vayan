@@ -1,39 +1,53 @@
 import {
+    BiAtom,
     BiConversation,
+    BiHeart,
     BiHomeHeart,
     BiMeteor,
-    BiStreetView,
+    BiStar,
 } from 'react-icons/bi';
 
 export const sidebarContent = [
     {
-        id: 1,
+        id: 0,
         groupName: 'Personal',
         items: [
             {
-                id: 1,
+                id: 0,
                 icon: BiHomeHeart,
                 destination: '/',
                 text: 'Home'
             },
             {
-                id: 2,
-                icon: BiStreetView,
+                id: 1,
+                icon: BiHeart,
                 destination: '/about',
-                text: 'About'
+                text: 'About me'
             }
         ]
     },
     {
-        id: 2,
+        id: 1,
         groupName: 'Projects',
         items: [
             {
+                id: 0,
+                icon: BiStar,
+                destination: '/project-selection',
+                text: 'Project selection'
+            },
+            {
                 id: 1,
                 icon: BiMeteor,
-                destination: '/latest',
-                text: 'Latest projects'
-            }
+                destination: '/active-projects',
+                text: 'Active projects'
+            },
+            {
+                id: 2,
+                icon: BiAtom,
+                destination: '/all-projects',
+                text: 'All projects'
+            },
         ]
     },
     {

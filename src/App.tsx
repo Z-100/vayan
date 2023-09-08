@@ -25,7 +25,7 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <div className="flex flex-row bg-primary dark:bg-light-primary">
+                <div className="flex flex-row bg-neutral-primary dark:bg-light-neutral-primary">
                     <SideBar
                         darkMode={darkMode}
                         toggleDarkMode={toggleDarkMode}
