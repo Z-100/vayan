@@ -29,7 +29,7 @@
     "@tailwindcss/forms": "^0.5.4",
     "@types/aos": "^3.0.4",
     "@types/bootstrap": "^5.2.6",
-    "@types/react": "^18.2.14",
+    "@types/react": "^18.2.31",
     "@types/react-bootstrap": "^0.32.32",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27",
