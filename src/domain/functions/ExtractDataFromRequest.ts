@@ -6,6 +6,7 @@ export function ExtractDataFromRequest<Type>(promise: Promise<Type>) {
     const [error, setError] = useState<string | null>(null)
     const [isLoading, setIsLoading] = useState(true)
 
+    // TODO: Replace by react-query
     useEffect(() => {
         promise.then(res => setData(res))
             .catch(err => setError(err))

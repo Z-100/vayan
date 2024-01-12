@@ -1,21 +1,21 @@
 import React from 'react'
 import {useGetRepositoryFromUser} from "../../domain";
+import {GithubRepository} from "../../domain/models/GithubRepository";
+import {GithubRepositoryCard} from "./components/GithubRepositoryCard";
 
 export const LatestProjectsPage = () => {
 
-    const {data} = useGetRepositoryFromUser("Z-100", "vayan")
+    let repositories: GithubRepository[] = []
+
+    repositories.push(useGetRepositoryFromUser("Z-100", "vayan").data!!)
+    repositories.push(useGetRepositoryFromUser("Z-100", "soemi-weather").data!!)
+    repositories.push(useGetRepositoryFromUser("Z-100", "M5Stack-parkingsystem").data!!)
 
     return (
         <>
-            {data?.name}
-            <br/>
-            {data?.description}
-            <br/>
-            {data?.full_name}
-            <br/>
-            {data?.html_url}
-            <br/>
-            {data?.language}
+            {repositories.map((repository, index) => {
+                <GithubRepositoryCard key={index} repository={repository} />
+            })}
         </>
     )
 }
