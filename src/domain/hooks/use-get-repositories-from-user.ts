@@ -1,5 +1,6 @@
-import {githubApi} from "../";
+import {githubApi} from '../';
+import {ExtractDataFromRequest} from '../functions';
 
 export function useGetRepositoriesFromUser(user: string) {
-    return githubApi.getRepositoriesFromUser(user)
+    return ExtractDataFromRequest(githubApi.getRepositoriesFromUser(user))
 }

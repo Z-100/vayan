@@ -8,6 +8,14 @@ export const LatestProjectsPage = () => {
     return (
         <>
             {data?.name}
+            <br/>
+            {data?.description}
+            <br/>
+            {data?.full_name}
+            <br/>
+            {data?.html_url}
+            <br/>
+            {data?.language}
         </>
     )
 }
