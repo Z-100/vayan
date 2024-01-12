@@ -1,5 +1,5 @@
 import React from 'react'
-import {sidebarContent} from '../../models'
+import {sidebarContent} from '../../domain/models'
 import {Link} from 'react-router-dom'
 import {ToggleSwitch} from "../common";
 

@@ -1,4 +1,4 @@
 export * from './CardContent'
-export * from './RouterType'
-export * from './RouterGroup'
+export * from './RouteType'
+export * from './RouteGroup'
 export * from './temp-consts'

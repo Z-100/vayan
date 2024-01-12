@@ -1,6 +1,6 @@
 import React from 'react'
 import {ContentCardWrapper} from "../../components";
-import {CardContent} from "../../models";
+import {CardContent} from "../../domain/models";
 
 export const WelcomePage = () => {
 

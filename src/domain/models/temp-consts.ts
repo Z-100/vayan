@@ -1,4 +1,5 @@
 import {
+    BiAlarm,
     BiAtom,
     BiConversation,
     BiHeart,
@@ -48,6 +49,12 @@ export const sidebarContent = [
                 destination: '/all-projects',
                 text: 'All projects'
             },
+            {
+                id: 3,
+                icon: BiAlarm,
+                destination: '/latest-projects',
+                text: 'Latest projects',
+            }
         ]
     },
     {

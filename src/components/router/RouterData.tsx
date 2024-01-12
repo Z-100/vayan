@@ -1,7 +1,7 @@
 import {
     RouteType,
     RouteGroup
-} from "../../models";
+} from "../../domain/models";
 import React from "react";
 import {
     AboutPage,

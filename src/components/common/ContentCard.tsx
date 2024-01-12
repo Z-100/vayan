@@ -1,5 +1,5 @@
 import React from 'react'
-import {CardContent} from "../../models";
+import {CardContent} from "../../domain/models";
 
 interface ContentCardProps {
     content: CardContent

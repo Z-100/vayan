@@ -1,8 +1,13 @@
 import React from 'react'
+import {useGetRepositoryFromUser} from "../../domain";
 
 export const LatestProjectsPage = () => {
 
-    return(
-        <p>Latest Projects Page</p>
+    const {data} = useGetRepositoryFromUser("Z-100", "vayan")
+
+    return (
+        <>
+            {data?.name}
+        </>
     )
 }
