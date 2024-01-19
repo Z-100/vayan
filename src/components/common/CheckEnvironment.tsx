@@ -1,4 +1,3 @@
-
 interface CheckEnvironmentProps {
     component: Object
 }
