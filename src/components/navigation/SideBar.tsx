@@ -22,7 +22,7 @@ export const SideBar = () => {
                             <div className="flex justify-center text-3xl">{<route.icon/>}</div>
                             <span
                                 className="opacity-0 whitespace-nowrap transition-opacity duration-200 ease-in-out group-hover:opacity-100">
-                                {route.text}
+                                {route.name}
                             </span>
                         </Link>
                     )}

@@ -1,6 +1,5 @@
 export enum RouteGroup {
-    GENERAL = 'General',
-    PERSONAL = 'Personal',
-    PROJECTS = 'Projects',
-    ADDITIONAL = 'Additional'
+    LEFT = 'LEFT',
+    MID = 'MID',
+    RIGHT = 'RIGHT',
 }
