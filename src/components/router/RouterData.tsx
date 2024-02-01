@@ -10,7 +10,7 @@ import {
     BiHomeHeart,
 } from "react-icons/bi";
 
-const routerData: RouteType[] = [
+export const routerData: RouteType[] = [
     {
         path: "/",
         element: <WelcomePage/>,
@@ -33,5 +33,3 @@ const routerData: RouteType[] = [
         group: RouteGroup.GENERAL,
     },
 ]
-
-export default routerData;

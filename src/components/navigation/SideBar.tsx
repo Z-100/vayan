@@ -1,21 +1,15 @@
 import React from 'react'
-import routes from "../router/RouterData";
-import {RouteType} from "../../domain";
-import { Link } from 'react-router-dom';
-
-type GroupedRoutes = Record<string, RouteType[]>
+import {Link} from 'react-router-dom';
+import {groupRoutes} from "../../domain/";
+import {routerData} from "../";
 
 export const SideBar = () => {
 
-    let groupedRoutes = routes.reduce((groupedRoutes, route) => {
-        const {group, ...rest} = route;
-        groupedRoutes[group] = groupedRoutes[group] || []
-        groupedRoutes[group].push({group, ...rest});
-        return groupedRoutes;
-    }, {} as GroupedRoutes);
+    const groupedRoutes = groupRoutes(routerData)
 
     return (
-        <nav className="z-50 items-center group w-16 min-h-screen bg-neutral-secondary p-5 box-border text-base-100 overflow-hidden transition-all duration-700 ease-in-out fixed hover:w-72 dark:bg-light-neutral-secondary">
+        <nav
+            className="z-50 items-center group w-16 min-h-screen bg-neutral-secondary p-5 box-border text-base-100 overflow-hidden transition-all duration-700 ease-in-out fixed hover:w-72 dark:bg-light-neutral-secondary">
             {Object.keys(groupedRoutes).map((key, index) =>
                 <div className="mb-2 pb-2 border-b border-white" key={index}>
                     {groupedRoutes[key].map((route, i) =>
@@ -26,7 +20,10 @@ export const SideBar = () => {
                         >
 
                             <div className="flex justify-center text-3xl">{<route.icon/>}</div>
-                            <span className="opacity-0 whitespace-nowrap transition-opacity duration-200 ease-in-out group-hover:opacity-100">{route.text}</span>
+                            <span
+                                className="opacity-0 whitespace-nowrap transition-opacity duration-200 ease-in-out group-hover:opacity-100">
+                                {route.text}
+                            </span>
                         </Link>
                     )}
 
