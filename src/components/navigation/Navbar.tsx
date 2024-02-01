@@ -8,7 +8,7 @@ export const Navbar = () => {
     const groupedRoutes = groupRoutes(routerData)
 
     return (
-        <nav>
+        <nav className="absolute ml-[50">
             {Object.keys(groupedRoutes).map(groupName =>
                 <span key={groupName}>
                     {groupedRoutes[groupName].map(route =>
