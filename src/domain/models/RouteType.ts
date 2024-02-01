@@ -5,7 +5,7 @@ import {RouteGroup} from "./RouteGroup";
 export interface RouteType {
     path: string,
     element: JSX.Element
-    title: string,
+    text: string,
     icon: IconType
     group: RouteGroup
 }

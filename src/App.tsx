@@ -1,32 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css'
-import {
-    BrowserRouter,
-} from 'react-router-dom';
-import {
-    Router,
-    SideBar
-} from './components';
+import {BrowserRouter} from 'react-router-dom';
+import {Router, SideBar} from './components';
 
 function App() {
 
-    const [darkMode, setDarkMode] = useState(true)
-
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode)
-        console.log(darkMode)
-    }
-
     return (
-        <>
-            <BrowserRouter>
-                <SideBar
-                    darkMode={darkMode}
-                    toggleDarkMode={toggleDarkMode}
-                />
-                <Router/>
-            </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <div className="flex flex-row bg-neutral-primary dark:bg-light-neutral-primary">
+                <SideBar/>
+                <div className="ml-16">
+                    <Router/>
+                </div>
+            </div>
+        </BrowserRouter>
     );
 }
 

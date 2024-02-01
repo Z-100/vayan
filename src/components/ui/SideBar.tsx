@@ -1,49 +1,40 @@
 import React from 'react'
-import {RouteGroup} from '../../models'
-import {Link} from 'react-router-dom'
-import {
-    CheckEnvironment,
-    ToggleSwitch
-} from "../common";
-import routerData from "../router/RouterData";
+import routes from "../router/RouterData";
+import {RouteType} from "../../domain";
+import { Link } from 'react-router-dom';
 
-interface SideBarProps {
-    darkMode: boolean,
-    toggleDarkMode: () => void
-}
+type GroupedRoutes = Record<string, RouteType[]>
 
-export const SideBar = ({ darkMode, toggleDarkMode }: SideBarProps) => {
+export const SideBar = () => {
 
-    const groups: Record<RouteGroup, string> = {
-        [RouteGroup.GENERAL]: RouteGroup.GENERAL,
-        [RouteGroup.PERSONAL]: RouteGroup.PERSONAL,
-        [RouteGroup.PROJECTS]: RouteGroup.PROJECTS,
-        [RouteGroup.ADDITIONAL]: RouteGroup.ADDITIONAL,
-    }
+    let groupedRoutes = routes.reduce((groupedRoutes, route) => {
+        const {group, ...rest} = route;
+        groupedRoutes[group] = groupedRoutes[group] || []
+        groupedRoutes[group].push({group, ...rest});
+        return groupedRoutes;
+    }, {} as GroupedRoutes);
 
-    return ( // w-16 bg-neutral-secondary p-2 box-border overflow-hidden transition-all hover:w-52
-        <nav className="sidebar">
-            {Object.values(groups).map(group => (
-                <div className="sidebar-group" key={group.toString()}>
-                    <CheckEnvironment component={<p>{group}</p>} />
-                    {routerData.map(route => (
-                        route.group === group ? (
-                            <Link
-                                to={route.path}
-                                className="sidebar-item"
-                                key={route.title}
-                            >
-                                <div className="sidebar-item-icon">{<route.icon/>}</div>
-                                <span className="sidebar-item-text">{route.title}</span>
-                            </Link>
-                            )
-                        : undefined
-                    ))}
+    console.log(groupedRoutes)
+    return (
+        <nav className="z-50 items-center group w-16 min-h-screen bg-neutral-secondary p-5 box-border text-base-100 overflow-hidden transition-all duration-700 ease-in-out fixed hover:w-72 dark:bg-light-neutral-secondary">
+            {Object.keys(groupedRoutes).map((key, index) =>
+                <div className="mb-2 pb-2 border-b border-white" key={index}>
+                    {/*<p>{key}</p>*/}
+
+                    {groupedRoutes[key].map((route, i) =>
+                        <Link
+                            key={i}
+                            to={route.path}
+                            className="flex items-center my-3 h-12 text-xl rounded-lg transition-colors duration-500 ease-in-out hover:bg-gray-500 hover:bg-opacity-50 space-x-2"
+                        >
+
+                            <div className="flex justify-center text-3xl">{<route.icon/>}</div>
+                            <span className="opacity-0 whitespace-nowrap transition-opacity duration-200 ease-in-out group-hover:opacity-100">{route.text}</span>
+                        </Link>
+                    )}
+
                 </div>
-            ))}
-            <div>
-                <ToggleSwitch fun={toggleDarkMode}/>
-            </div>
+            )}
         </nav>
     )
 }
