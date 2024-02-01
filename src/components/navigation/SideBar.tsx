@@ -14,13 +14,10 @@ export const SideBar = () => {
         return groupedRoutes;
     }, {} as GroupedRoutes);
 
-    console.log(groupedRoutes)
     return (
         <nav className="z-50 items-center group w-16 min-h-screen bg-neutral-secondary p-5 box-border text-base-100 overflow-hidden transition-all duration-700 ease-in-out fixed hover:w-72 dark:bg-light-neutral-secondary">
             {Object.keys(groupedRoutes).map((key, index) =>
                 <div className="mb-2 pb-2 border-b border-white" key={index}>
-                    {/*<p>{key}</p>*/}
-
                     {groupedRoutes[key].map((route, i) =>
                         <Link
                             key={i}
