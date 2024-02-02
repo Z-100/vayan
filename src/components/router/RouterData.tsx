@@ -12,11 +12,11 @@ export const routerData: RouteType[] = [
         group: RouteGroup.LEFT,
     },
     {
-        path: "/projects",
-        element: <ProjectsPage/>,
-        name: "Projects",
+        path: "/contact",
+        element: <ContactPage/>,
+        name: "Contact",
         icon: BiHomeHeart,
-        group: RouteGroup.MID,
+        group: RouteGroup.RIGHT,
     },
     {
         path: "/demo",
@@ -26,10 +26,10 @@ export const routerData: RouteType[] = [
         group: RouteGroup.MID,
     },
     {
-        path: "/contact",
-        element: <ContactPage/>,
-        name: "Contact",
+        path: "/projects",
+        element: <ProjectsPage/>,
+        name: "Projects",
         icon: BiHomeHeart,
-        group: RouteGroup.RIGHT,
+        group: RouteGroup.MID,
     },
 ]

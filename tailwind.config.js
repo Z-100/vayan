@@ -8,13 +8,11 @@ module.exports = {
     darkMode: 'class',
     theme: {
         colors: {
-            'primary': '#a991f7',
-            'secondary': '#f6d860',
-            'accent': '#37cdbe',
-            'neutral-primary': '#3d4451',
-            'neutral-secondary': '#556072',
-            'neutral-third': '#3d4451',
-            'base-100': '#ffffff',
+            'primary': '#D3D9E9',
+            'secondary': '#A6A9C8',
+            'layerTwo': '#796EA8',
+            'layerOne': '#554D74',
+            'background': '#31293F',
         },
     },
     plugins: [
