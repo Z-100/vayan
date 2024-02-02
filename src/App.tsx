@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'
+import './index.css'
 import {BrowserRouter} from 'react-router-dom';
 import {Footer, Navbar, Router} from './components';
 
