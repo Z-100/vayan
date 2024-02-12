@@ -7,9 +7,11 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Router/>
-            <Navbar/>
-            <Footer/>
+            <div className="flex-col">
+                <Navbar/>
+                <Router/>
+                <Footer/>
+            </div>
         </BrowserRouter>
     );
 }

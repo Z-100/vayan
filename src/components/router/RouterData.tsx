@@ -7,16 +7,16 @@ export const routerData: RouteType[] = [
     {
         path: "/",
         element: <HomePage/>,
-        name: "Welcome",
+        name: "Home",
         icon: BiHomeHeart,
         group: RouteGroup.LEFT,
     },
     {
-        path: "/contact",
-        element: <ContactPage/>,
-        name: "Contact",
+        path: "/projects",
+        element: <ProjectsPage/>,
+        name: "Projects",
         icon: BiHomeHeart,
-        group: RouteGroup.RIGHT,
+        group: RouteGroup.MID,
     },
     {
         path: "/demo",
@@ -26,10 +26,10 @@ export const routerData: RouteType[] = [
         group: RouteGroup.MID,
     },
     {
-        path: "/projects",
-        element: <ProjectsPage/>,
-        name: "Projects",
+        path: "/contact",
+        element: <ContactPage/>,
+        name: "Contact",
         icon: BiHomeHeart,
-        group: RouteGroup.MID,
+        group: RouteGroup.RIGHT,
     },
 ]
