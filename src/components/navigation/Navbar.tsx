@@ -12,7 +12,7 @@ export const Navbar = () => {
     return (
         <>
             <div className="fixed bottom-0 left-0 right-0 mb-4 sm:top-0 sm:mb-32 sm:bottom-auto flex justify-center">
-                <nav className="bg-layerOne flex rounded-full w-64 h-12 sm:w-full sm:h-16 sm:p-8 sm:rounded-none">
+                <nav className="bg-secondary flex rounded-full w-64 h-12 sm:bg-layerTwo sm:w-full sm:h-16 sm:p-8 sm:rounded-none">
                     {Object.keys(groupedRoutes).map((groupName, index) => (
                         <div key={groupName} className="w-full gap-1 flex flex-nowrap">
                             {groupedRoutes[groupName].map(route => (
