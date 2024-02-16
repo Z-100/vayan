@@ -1,10 +1,14 @@
 import React from 'react'
+import {AboutContainer, FeaturedProjectsContainer, IntroductionContainer, SkillsContainer} from "./components";
 
 export const HomePage = () => {
 
     return (
         <>
-            <h1>Home</h1>
+            <IntroductionContainer/>
+            <AboutContainer/>
+            <SkillsContainer/>
+            <FeaturedProjectsContainer/>
         </>
     )
 }
