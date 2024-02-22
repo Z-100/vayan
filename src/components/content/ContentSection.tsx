@@ -1,16 +1,16 @@
 import React from 'react'
+import {TextSection} from "../../domain";
 
 type ImagePos = 'left' | 'right' | 'top'
 type TextPos = 'left' | 'right' | 'centered'
 
-interface TextSectionProps {
-    title: string,
-    text: string,
+interface ContentSectionProps {
+    textSection: TextSection,
     textPos?: TextPos,
     image?: string,
 }
 
-export const ContentSection = ({title, text, textPos = 'left', image}: TextSectionProps) => {
+export const ContentSection = ({textSection, textPos = 'left', image}: ContentSectionProps) => {
 
     function getImagePos(textPos: TextPos): ImagePos {
         if (textPos === 'left') return 'right'
@@ -24,18 +24,20 @@ export const ContentSection = ({title, text, textPos = 'left', image}: TextSecti
 
     if (image) {
         return (
-            <div>
-                <h1>{title}</h1>
-                <p>{text}</p>
-                <img className={"text-" + imagePos} src={image} alt={title}/>
+            <div className="flex flex-row">
+                <div>
+                    <h1>{textSection.title}</h1>
+                    <p>{textSection.text}</p>
+                </div>
+                <img className={"text-" + imagePos} src={image} alt={textSection.title}/>
             </div>
         );
     }
 
     return (
         <div>
-            <h1>{title}</h1>
-            <p className={"text-" + textPos}>{text}</p>
+            <h1>{textSection.title}</h1>
+            <p className={"text-" + textPos}>{textSection.text}</p>
         </div>
     )
 }
