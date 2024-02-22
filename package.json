@@ -7,7 +7,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prebuild": "postcss ./src/css/app.css -o ./src/App.css"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.16",
