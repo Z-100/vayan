@@ -7,7 +7,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <div className="flex-col">
+            <div className="flex flex-col">
                 <Navbar/>
                 <Router/>
                 <Footer/>
