@@ -1,6 +1,4 @@
-# Vayan - Z-100's CV website
-
-Basically the title
+# Vayan - CV page
 
 I'm not a React- nor frontend-dev, but I'm trying my best :)
 
@@ -8,7 +6,18 @@ I'm not a React- nor frontend-dev, but I'm trying my best :)
 
 ```shell
 > git clone https://github.com/Z-100/vayan.git
-> cd ./vayan
 > npm i
 > npm run start
 ```
+## Checklist
+
+| Status          | Thing           |
+|:---------------:|:----------------|
+| :x:             | Define content  |
+| :x:             | Write content   |
+| :x:             | Make pretty     |
+| :grey_question: | Dynamic content |
+
+## Future stuff
+
+- Deploy on [personal k8s](https://github.com/Z-100/k8s)
