@@ -7,7 +7,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <div className="flex-col">
+            <div className="flex flex-col min-h-screen justify-between items-center">
                 <Navbar/>
                 <Router/>
                 <Footer/>

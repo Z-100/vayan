@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {JSX} from 'react'
+import {AboutContainer, IntroductionContainer, SkillsContainer} from "./components";
+import {mapContentContainers} from "../../domain";
 
 export const HomePage = () => {
 
-    return (
-        <>
-            <h1>Home</h1>
-        </>
-    )
+    const containers: JSX.Element[] = [
+        <IntroductionContainer/>,
+        <AboutContainer/>,
+        <SkillsContainer/>,
+    ];
+
+    return (<>{mapContentContainers(containers)}</>);
 }
