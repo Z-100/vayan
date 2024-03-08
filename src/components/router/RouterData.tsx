@@ -5,7 +5,7 @@ import {BiHomeHeart,} from "react-icons/bi";
 
 export const routerData: RouteType[] = [
     {
-        path: "/",
+        path: "/*",
         element: <HomePage/>,
         name: "Home",
         icon: BiHomeHeart,
