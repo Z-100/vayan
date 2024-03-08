@@ -4,7 +4,7 @@ import {socialMediaElements} from "../../domain";
 export const Footer = () => {
 
     return(
-        <div className="w-full h-40 p-8 bg-dark-0 bottom-0 flex flex-col items-center justify-center pb-20 sm:pb-8">
+        <div className="sticky w-full h-40 p-8 bg-dark-0 flex flex-col items-center justify-center pb-20 sm:pb-8 ">
             <ul className="flex flex-row">
                 {socialMediaElements.map((social, index) => (
                     <li key={index} className="m-2 sm:px-2">
