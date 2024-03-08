@@ -1,37 +1,35 @@
-import {
-    RouteType,
-    RouteGroup
-} from "../../domain";
+import {RouteGroup, RouteType} from "../../domain";
 import React from "react";
-import {
-    WelcomePage
-} from "../../pages";
-import {
-    BiHomeHeart,
-} from "react-icons/bi";
+import {ContactPage, DemoPage, HomePage, ProjectsPage} from "../../pages";
+import {BiHomeHeart,} from "react-icons/bi";
 
-const routerData: RouteType[] = [
+export const routerData: RouteType[] = [
     {
         path: "/",
-        element: <WelcomePage/>,
-        text: "Welcome",
+        element: <HomePage/>,
+        name: "Home",
         icon: BiHomeHeart,
-        group: RouteGroup.GENERAL,
+        group: RouteGroup.LEFT,
     },
     {
-        path: "/goodbye",
-        element: <WelcomePage/>,
-        text: "Goodbye",
+        path: "/projects",
+        element: <ProjectsPage/>,
+        name: "Projects",
         icon: BiHomeHeart,
-        group: RouteGroup.PERSONAL,
+        group: RouteGroup.MID,
     },
     {
-        path: "/no",
-        element: <WelcomePage/>,
-        text: "No",
+        path: "/demo",
+        element: <DemoPage/>,
+        name: "Demo",
         icon: BiHomeHeart,
-        group: RouteGroup.GENERAL,
+        group: RouteGroup.MID,
+    },
+    {
+        path: "/contact",
+        element: <ContactPage/>,
+        name: "Contact",
+        icon: BiHomeHeart,
+        group: RouteGroup.RIGHT,
     },
 ]
-
-export default routerData;

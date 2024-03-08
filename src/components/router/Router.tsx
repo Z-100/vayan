@@ -1,17 +1,19 @@
 import React from 'react'
-import routerData from "./RouterData";
+import {routerData} from "./";
 import {Route, Routes} from "react-router-dom";
 
 export const Router = () => {
     return (
-        <Routes>
-            {routerData.map(({path, element, text}) => (
-                <Route
-                    key={text}
-                    path={path}
-                    element={element}
-                />
-            ))}
-        </Routes>
+        <div className="w-full md:w-[80%]">
+            <Routes>
+                {routerData.map(({path, element, name}) => (
+                    <Route
+                        key={name}
+                        path={path}
+                        element={element}
+                    />
+                ))}
+            </Routes>
+        </div>
     );
 }

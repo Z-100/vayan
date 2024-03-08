@@ -4,8 +4,6 @@ I'm not a React- nor frontend-dev, but I'm trying my best :)
 
 ## Run the app
 
-Clone the repository using the terminal or your IDE:
-
 ```shell
 > git clone https://github.com/Z-100/vayan.git
 > npm i

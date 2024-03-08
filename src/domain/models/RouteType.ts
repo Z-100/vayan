@@ -1,11 +1,11 @@
 import {JSX} from "react";
-import {IconType} from "react-icons/lib";
 import {RouteGroup} from "./RouteGroup";
+import {IconType} from "react-icons";
 
 export interface RouteType {
     path: string,
     element: JSX.Element
-    text: string,
+    name: string,
     icon: IconType
     group: RouteGroup
 }

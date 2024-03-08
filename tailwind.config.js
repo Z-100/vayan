@@ -3,29 +3,30 @@ module.exports = {
     mode: 'jit',
     content: [
         './src/**/*.{ts,tsx,js,jsx}',
-        './public/**/*.{html}'
+        './public/**/*.html'
     ],
-    darkMode: 'class',
     theme: {
-        extend: {
-            colors: {
-                'light-primary': '#9070f4',
-                'light-secondary': '#f6d446',
-                'light-accent': '#68f1e5',
-                'light-neutral-primary': '#92a6c5',
-                'light-neutral-secondary': '#8391ae',
-                'light-neutral-third': '#6c788e',
-                'light-base-100': '#ffffff',
-            },
-        },
         colors: {
-            'primary': '#a991f7',
-            'secondary': '#f6d860',
-            'accent': '#37cdbe',
-            'neutral-primary': '#3d4451',
-            'neutral-secondary': '#556072',
-            'neutral-third': '#3d4451',
-            'base-100': '#ffffff',
+            'dark-0': '#0F0F0F',
+            'dark-1': '#191919',
+            'dark-2': '#252525',
+            'dark-3': '#313131',
+            'light-0': '#787878',
+            'light-1': '#b5b5b5',
+            'light-2': '#d5d5d5',
+            'light-3': '#f5f5f5',
+        },
+        future: {
+            hoverOnlyWhenSupported: true,
+        },
+        fontFamily: {
+            'Montserrat': ['Montserrat', 'sans-serif'],
+        },
+        screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px',
         },
     },
     plugins: [
