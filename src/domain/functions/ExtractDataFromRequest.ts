@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 export function ExtractDataFromRequest<Type>(promise: Promise<Type>) {
 
@@ -6,12 +6,15 @@ export function ExtractDataFromRequest<Type>(promise: Promise<Type>) {
     const [error, setError] = useState<string | null>(null)
     const [isLoading, setIsLoading] = useState(true)
 
+    setData(null)
+    setError(null)
+    setIsLoading(false)
     // TODO: Replace by react-query
-    useEffect(() => {
-        promise.then(res => setData(res))
-            .catch(err => setError(err))
-            .finally(() => setIsLoading(false))
-    }, [])
+    // useEffect(() => {
+    //     promise.then(res => setData(res))
+    //         .catch(err => setError(err))
+    //         .finally(() => setIsLoading(false))
+    // }, [])
 
     return {data, error, isLoading}
 }

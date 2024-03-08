@@ -1,17 +1,16 @@
 import React from 'react';
-import './App.css'
+import './index.css'
 import {BrowserRouter} from 'react-router-dom';
-import {Router, SideBar} from './components';
+import {Footer, Navbar, Router} from './components';
 
 function App() {
 
     return (
         <BrowserRouter>
-            <div className="flex flex-row bg-neutral-primary dark:bg-light-neutral-primary">
-                <SideBar/>
-                <div className="ml-16">
-                    <Router/>
-                </div>
+            <div className="flex flex-col min-h-screen justify-between items-center">
+                <Navbar/>
+                <Router/>
+                <Footer/>
             </div>
         </BrowserRouter>
     );

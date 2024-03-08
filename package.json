@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prestart": "postcss ./src/css/app.css -o ./src/App.css",
-    "prebuild": "postcss ./src/css/app.css -o ./src/App.css"
+    "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.0.16",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
