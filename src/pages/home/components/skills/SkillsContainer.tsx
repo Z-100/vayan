@@ -6,7 +6,7 @@ export const SkillsContainer = () => {
 
     return (
         <>
-            {skillsTexts.map((section, index) => (
+            {skillsTexts.map(section => (
                 <ContentSection textSection={section}/>
             ))}
         </>
