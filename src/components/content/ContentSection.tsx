@@ -21,12 +21,13 @@ export const ContentSection = ({textSection, textPos = 'left', image}: ContentSe
     }
 
     function mapTextToP(text: string, textPos: TextPos): JSX.Element {
-        return(
+        return (
             <>
                 {text.split("\n").map((line, i) => (
                     <>
-                        {line === '' && <br/> /* Ik this is a cheap solution */}
-                        <p className={"text-" + textPos} key={i}>{line}</p>
+                        { /* Ik this is a cheap solution */
+                            line === 'br' ? <br/> : <p className={"text-" + textPos} key={i}>{line}</p>
+                        }
                     </>
                 ))}
             </>
@@ -35,7 +36,7 @@ export const ContentSection = ({textSection, textPos = 'left', image}: ContentSe
 
     const imagePos = getImagePos(textPos)
 
-    if (image) {
+    if (!textSection.texts && image) {
         return (
             <div className="flex flex-row my-5">
                 <div>
@@ -47,10 +48,25 @@ export const ContentSection = ({textSection, textPos = 'left', image}: ContentSe
         );
     }
 
+    if (!textSection.texts) {
+        return (
+            <div className="my-5">
+                <h1 className="mb-2">{textSection.title}</h1>
+                {mapTextToP(textSection.text, textPos)}
+            </div>
+        );
+    }
+
     return (
         <div className="my-5">
             <h1 className="mb-2">{textSection.title}</h1>
             {mapTextToP(textSection.text, textPos)}
+            {textSection.texts!.map((text, i) => (
+                <>
+                    <h2 className="mb-1 mt-2">{text.title}</h2>
+                    {mapTextToP(text.text, textPos)}
+                </>
+            ))}
         </div>
     );
 }
