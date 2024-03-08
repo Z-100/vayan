@@ -1,5 +1,6 @@
 import React, {JSX} from 'react'
 import {AboutContainer, IntroductionContainer, SkillsContainer} from "./components";
+import {mapContentContainers} from "../../domain";
 
 export const HomePage = () => {
 
@@ -9,13 +10,5 @@ export const HomePage = () => {
         <SkillsContainer/>,
     ];
 
-    return (
-        <div className="flex flex-col items-center">
-            {containers.map((container, index) => (
-                <div className="w-full bg-dark-3 my-2 px-4 sm:w-[80%]">
-                    {container}
-                </div>
-            ))}
-        </div>
-    )
+    return (<>{mapContentContainers(containers)}</>);
 }

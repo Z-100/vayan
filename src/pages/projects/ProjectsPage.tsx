@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {JSX} from 'react'
 import {FeaturedProjectsContainer} from "./components";
+import {mapContentContainers} from "../../domain";
 
 export const ProjectsPage = () => {
 
-    return (
-        <div className="flex justify-center items-center w-full bg-dark-3 my-2 px-4 sm:w-[80%]">
-            <FeaturedProjectsContainer/>
-        </div>
-    )
+    const containers: JSX.Element[] = [
+        <FeaturedProjectsContainer/>,
+    ];
+
+    return (<>{mapContentContainers(containers)}</>);
+
 }
