@@ -2,7 +2,7 @@ import React from 'react'
 import {Project} from "../../../../domain";
 import {ProjectSection} from "../../../../components";
 
-export const FeaturedProjectsContainer = () => {
+export const LatestProjectsContainer = () => {
 
     // @formatter:off
     const projects: Project[] = [
@@ -18,10 +18,10 @@ export const FeaturedProjectsContainer = () => {
         <div className="flex flex-wrap gap-6 p-6">
             {projects.map((project, index) => (
                 <ProjectSection key={index}
-                                  name={project.name}
-                                  description={project.desc}
-                                  url={project.url}
-                                  image={project.img}/>
+                                name={project.name}
+                                description={project.desc}
+                                url={project.url}
+                                image={project.img}/>
             ))}
         </div>
     )

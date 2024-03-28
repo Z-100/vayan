@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-interface ProjectContainerProps {
+interface ProjectSectionProps {
     name: string,
     description: string,
     url: string,
     image: string,
 }
-export const ProjectContainer = ({ name, description, url, image }: ProjectContainerProps) => {
+export const ProjectSection = ({ name, description, url, image }: ProjectSectionProps) => {
     return (
         <>
             <div className="flex p-4 bg-secondary w-96 h-48 rounded-lg shadow-md overflow-hidden">
