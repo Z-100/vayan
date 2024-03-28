@@ -19,13 +19,12 @@ export const ContactFormContainer = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Perform form submission or validation here
         console.log(formData);
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="my-2">
                 <label htmlFor="name">Name:</label>
                 <input
                     type="text"
@@ -34,9 +33,10 @@ export const ContactFormContainer = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    className="w-full px-2 py-1 border rounded-md focus:outline-none bg-dark-2 focus:border-purple-500"
                 />
             </div>
-            <div>
+            <div className="my-2">
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
@@ -45,29 +45,37 @@ export const ContactFormContainer = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    className="w-full px-2 py-1 border rounded-md focus:outline-none bg-dark-2 focus:border-purple-500"
                 />
             </div>
-            <div>
-                <label htmlFor="phoneNumber">Phone Number:</label>
+            <div className="my-2">
+                <label htmlFor="phoneNumber">Phone Number</label>
                 <input
                     type="text"
                     id="phoneNumber"
                     name="phoneNumber"
                     value={formData.phoneNumber}
                     onChange={handleChange}
+                    className="w-full px-2 py-1 border rounded-md focus:outline-none bg-dark-2 focus:border-purple-500"
                 />
             </div>
-            <div>
-                <label htmlFor="message">Message:</label>
+            <div className="my-2">
+                <label htmlFor="message">Your Message</label>
                 <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    className="w-full px-2 py-1 border rounded-md focus:outline-none bg-dark-2 focus:border-purple-500"
                 />
             </div>
-            <button type="submit">Submit</button>
+            <button
+                className="w-full px-2 py-1 border-[1px] border-b-light-0 rounded-md bg-dark-3 border-purple-500"
+                type="submit"
+            >
+                Submit
+            </button>
         </form>
     );
 }

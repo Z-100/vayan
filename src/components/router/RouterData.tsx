@@ -1,6 +1,6 @@
 import {RouteGroup, RouteType} from "../../domain";
 import React from "react";
-import {ContactPage, HomePage, ProjectsPage} from "../../pages";
+import {HomePage, ProjectsPage} from "../../pages";
 import {BiHomeHeart,} from "react-icons/bi";
 
 export const routerData: RouteType[] = [
