@@ -4,7 +4,7 @@ export const featuredProjectsData: Project[] = [
     {
         name: "Vayan",
         shortDesc: "This Website",
-        desc: "sas",
+        desc: "I'm no frontend dev. I'm really not. At least it doesn't look like the original Apache Java Docs :)",
         url: "https://github.com/Z-100/vayan",
         img: "/favicon.ico"
     },
@@ -35,5 +35,12 @@ export const featuredProjectsData: Project[] = [
         desc: "One of my first Android apps! It counts down days in a cute way",
         url: "https://github.com/ZE-100/DayCounter",
         img: "/logo171.png"
+    },
+    {
+        name: "More projects",
+        shortDesc: "",
+        desc: "There are some more on my GitHub!",
+        url: "https://github.com/Z-100?tab=repositories",
+        img: "/github-logo.png"
     },
 ]

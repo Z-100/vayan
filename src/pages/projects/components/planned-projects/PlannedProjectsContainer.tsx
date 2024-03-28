@@ -5,7 +5,7 @@ import {plannedProjectsData} from "../../../../domain/mock-db/planned-projects-d
 export const PlannedProjectsContainer = () => {
 
     return (
-        <div className="flex flex-wrap gap-6 p-6">
+        <div className="flex flex-wrap justify-evenly py-6">
             {plannedProjectsData.map((project, index) => (
                 <ProjectSection key={index}
                                 name={project.name}
