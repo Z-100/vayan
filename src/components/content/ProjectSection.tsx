@@ -11,7 +11,7 @@ interface ProjectSectionProps {
 export const ProjectSection = ({ name, shortDesc, desc, url, image }: ProjectSectionProps) => {
     return (
         <>
-            <div className="p-4 bg-light-0 w-96 h-48 rounded-lg shadow-md overflow-hidden">
+            <div className="p-4 bg-dark-4 border-[1px] border-light-0 w-96 h-min-48 rounded-lg shadow-md overflow-hidden hover:bg-dark-5 transition">
                 <span className="flex">
                     <img src={image}
                          alt={name}

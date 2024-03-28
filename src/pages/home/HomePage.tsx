@@ -11,5 +11,9 @@ export const HomePage = () => {
         <SkillsContainer/>,
     ];
 
-    return (<>{mapContentContainers(containers)}</>);
+    return (
+        <div>
+            {mapContentContainers(containers)}
+        </div>
+    );
 }

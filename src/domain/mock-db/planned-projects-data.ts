@@ -4,15 +4,15 @@ export const plannedProjectsData: Project[] = [
     {
         name: "DMZ",
         shortDesc: "Document Management Zystem",
-        desc: "sas",
+        desc: "I wanna create my own DMS-System to manage... documents 🥁",
         url: "https://github.com/Z-100/DMZ",
         img: "/logo171.png"
     },
     {
         name: "k8s",
-        shortDesc: "Soon to be Kubernetes Cluster",
-        desc: "sas",
+        shortDesc: "Soon to be self hosted Kubernetes Cluster",
+        desc: "All of my projects should run here eventually. That's the end goal.",
         url: "https://github.com/Z-100/k8s",
-        img: "/logo171.png"
+        img: "/kubernetes-logo.png"
     },
 ]
