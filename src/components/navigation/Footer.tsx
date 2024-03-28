@@ -16,6 +16,7 @@ export const Footer = () => {
                     </li>
                 ))}
             </ul>
+
             <p className="text-light-2">© Copyright 2024 Z-100</p>
         </div>
     )

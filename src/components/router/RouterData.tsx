@@ -18,11 +18,4 @@ export const routerData: RouteType[] = [
         icon: BiHomeHeart,
         group: RouteGroup.MID,
     },
-    {
-        path: "/contact",
-        element: <ContactPage/>,
-        name: "Contact",
-        icon: BiHomeHeart,
-        group: RouteGroup.RIGHT,
-    },
 ]
