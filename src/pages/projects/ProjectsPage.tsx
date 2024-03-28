@@ -1,13 +1,12 @@
 import React, {JSX} from 'react'
-import {AllProjectsContainer, FeaturedProjectsContainer, LatestProjectsContainer} from "./components";
+import {PlannedProjectsContainer, FeaturedProjectsContainer} from "./components";
 import {mapContentContainers} from "../../domain";
 
 export const ProjectsPage = () => {
 
     const containers: JSX.Element[] = [
         <FeaturedProjectsContainer/>,
-        <LatestProjectsContainer/>,
-        <AllProjectsContainer/>,
+        <PlannedProjectsContainer/>,
     ];
 
     return (<>{mapContentContainers(containers)}</>);
