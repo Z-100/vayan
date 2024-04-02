@@ -19,30 +19,35 @@ export const ContactFormContainer = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(formData);
+        const {name, phoneNumber, message} = formData;
+        openMail(message, name, phoneNumber);
     };
+
+    const openMail = (
+        message: string,
+        name: string,
+        phoneNumber: string,
+    ) => {
+        const recipient = 'z100@zindustries.ch';
+        const subject = 'Interested in hiring';
+
+        message += `\n\nName: ${name}`;
+        if (phoneNumber) {
+            message += `\nPhone: ${phoneNumber}`
+        }
+
+        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    }
 
     return (
         <form onSubmit={handleSubmit}>
             <div className="my-2">
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">Name/Company</label>
                 <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-2 py-1 border rounded-md focus:outline-none bg-dark-2 focus:border-purple-500"
-                />
-            </div>
-            <div className="my-2">
-                <label htmlFor="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
                     onChange={handleChange}
                     required
                     className="w-full px-2 py-1 border rounded-md focus:outline-none bg-dark-2 focus:border-purple-500"
