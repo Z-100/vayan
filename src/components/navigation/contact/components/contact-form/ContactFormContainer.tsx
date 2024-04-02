@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 
 export const ContactFormContainer = () => {
 
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
         phoneNumber: '',
         message: '',
     });
@@ -32,9 +31,7 @@ export const ContactFormContainer = () => {
         const subject = 'Interested in hiring';
 
         message += `\n\nName: ${name}`;
-        if (phoneNumber) {
-            message += `\nPhone: ${phoneNumber}`
-        }
+        if (phoneNumber) message += `\nPhone: ${phoneNumber}`
 
         window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     }
