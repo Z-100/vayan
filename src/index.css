@@ -12,6 +12,11 @@
     }
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/public/Montserrat-Regular.ttf');
+}
+
 h1 {
     font-size: 2rem;
 }
