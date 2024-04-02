@@ -5,15 +5,18 @@ import {featuredProjectsData} from "../../../../domain/mock-db/featured-projects
 export const FeaturedProjectsContainer = () => {
 
     return (
-        <div className="flex flex-wrap justify-evenly py-6">
-                {featuredProjectsData.map((project, index) => (
-                    <ProjectSection key={index}
-                                    name={project.name}
-                                    shortDesc={project.shortDesc}
-                                    desc={project.desc}
-                                    url={project.url}
-                                    image={project.img}/>
-                ))}
-        </div>
+        <>
+            <h2 className="mt-5 ml-5">Featured Projects</h2>
+            <div className="flex flex-wrap justify-evenly py-6">
+                    {featuredProjectsData.map((project, index) => (
+                        <ProjectSection key={index}
+                                        name={project.name}
+                                        shortDesc={project.shortDesc}
+                                        desc={project.desc}
+                                        url={project.url}
+                                        image={project.img}/>
+                    ))}
+            </div>
+        </>
     )
 }
