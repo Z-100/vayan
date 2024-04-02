@@ -20,7 +20,7 @@ export const featuredProjectsData: Project[] = [
         shortDesc: "Geo Reminder App",
         desc: "Basically a location based reminder app",
         url: "https://github.com/ZE-100/GeoPal",
-        img: "/logo171.png"
+        img: "/android-logo.png"
     },
     {
         name: "BackFusion",
@@ -34,7 +34,7 @@ export const featuredProjectsData: Project[] = [
         shortDesc: "Cute day counter app",
         desc: "One of my first Android apps! It counts down days in a cute way",
         url: "https://github.com/ZE-100/DayCounter",
-        img: "/logo171.png"
+        img: "/android-logo.png"
     },
     {
         name: "More projects",
