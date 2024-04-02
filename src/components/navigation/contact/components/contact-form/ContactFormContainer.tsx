@@ -8,6 +8,20 @@ export const ContactFormContainer = () => {
         message: '',
     });
 
+    const openMail = (
+        message: string,
+        name: string,
+        phoneNumber: string,
+    ) => {
+        const recipient = 'z100@zindustries.ch';
+        const subject = 'Interested in hiring';
+
+        message += `\n\nName: ${name}`;
+        if (phoneNumber) message += `\nPhone: ${phoneNumber}`;
+
+        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    }
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData({
@@ -20,20 +34,11 @@ export const ContactFormContainer = () => {
         e.preventDefault();
         const {name, phoneNumber, message} = formData;
         openMail(message, name, phoneNumber);
+        resetForm();
     };
 
-    const openMail = (
-        message: string,
-        name: string,
-        phoneNumber: string,
-    ) => {
-        const recipient = 'z100@zindustries.ch';
-        const subject = 'Interested in hiring';
-
-        message += `\n\nName: ${name}`;
-        if (phoneNumber) message += `\nPhone: ${phoneNumber}`
-
-        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    const resetForm = () => {
+        setFormData({name: '', phoneNumber: '', message: ''});
     }
 
     return (

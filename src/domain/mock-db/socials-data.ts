@@ -14,7 +14,7 @@ export const socialMediaElements: SocialMediaElement[] = [
     },
     {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/marvin-z-17aa-742a9",
+        url: "https://linkedin.com/in/marvin-z",
         icon: FaLinkedin,
     },
     {
@@ -24,7 +24,7 @@ export const socialMediaElements: SocialMediaElement[] = [
     },
     {
         name: "Website",
-        url: "https://vayan.vercel.app",
+        url: "https://vayan.zindustries.ch",
         icon: FaReact,
     },
 ];
