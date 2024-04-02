@@ -16,19 +16,12 @@ export const Navbar = () => {
                               onClick={() => setActive(route.name)}
                               className="">
 
-                                <span className="visible sm:invisible w-6 ">
-                                    <route.icon
-                                        className={active === route.name ? "bg-dark-3 h-7 w-auto rounded-full transition-all duration-150" : "w-6 h-auto"}/>
-                                </span>
-
-                            <span className="invisible sm:visible">
-                                <p className={active === route.name ? "font-bold" : ""}>{route.name}</p>
-                            </span>
+                            <p className={active === route.name ? "font-bold" : "text-light-2"}>{route.name}</p>
                         </Link>
                     ))}
                 </div>
             </div>
-            <div className="h-16 hidden sm:block"></div>
+            <div className="h-12 sm:h-16 sm:block"></div>
         </>
     )
 }

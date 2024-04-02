@@ -18,7 +18,8 @@ export const aboutWebsiteTexts: TextSection[] = [
             'I\'m a passionate backend developer in need of a website.\n' +
             'And what better way is there to cut costs - I mean to learn new stuff - than by doing it myself?\n' +
             'br\n' +
-            'As said, I\'m a backend dev, who has no idea about proper frontend-\'deving\', so don\'t judge Vayan to hard :)',
+            'I\'m a backend dev who is currently learning how to frontend.\n' +
+            'So don\'t judge Vayan to hard :)',
     },
 ]
 
@@ -50,14 +51,16 @@ export const skillsTexts: TextSection[] = [
                 text:
                     'I started writing Java back in 2021 and have been using it ever since.\n' +
                     '> Both professionally and for my own projects\n' +
+                    'It\'s a good language and I like it, but...\n' +
                     'br\n',
             },
             {
                 title: 'Kotlin',
                 text:
-                    '> Easily my favourite language. Period.\n' +
+                    '> Easily my favourite language.\n' +
                     'Mostly, I\'ve used Kotlin for Android apps\n' +
                     'But as time went on I started using it in other use cases as well, e.g. Spring Boot\n' +
+                    '> Going forward I definitely wanna improve my skills in that language!\n' +
                     'br\n',
             },
             {
@@ -71,8 +74,18 @@ export const skillsTexts: TextSection[] = [
             {
                 title: 'Other languages',
                 text:
-                    '- C# along Unity, for... well, Unity\n' +
+                    '- C# along Unity, for... well, Unity Games\n' +
                     '- C++ for an Arduino/M5Stack project\n' +
+                    'br\n',
+            },
+            {
+                title: 'Other technologies',
+                text:
+                    '> Git, GitHub, GitLab, BitBucket\n' +
+                    '> Jira, GitHub Projects\n' +
+                    '> IntelliJ, VSCode, Ubuntu\n' +
+                    '> GitHub Actions, GitLab CI\n' +
+                    '> Kubernetes (learning)\n' +
                     'br\n',
             },
         ],
