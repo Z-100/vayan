@@ -1,34 +1,22 @@
 import React from 'react'
-import {ProjectContainer} from "./components";
+import {ProjectSection} from "../../../../components";
+import {featuredProjectsData} from "../../../../domain/mock-db/featured-projects-data";
 
-interface Project {
-    name: string,
-    desc: string,
-    url: string,
-    img: string,
-}
 export const FeaturedProjectsContainer = () => {
 
-    // @formatter:off
-    // TODO: Remove temp stuff
-    const projects: Project[] = [
-        {name:"Vayan",          desc:"This Website",            url:"https://github.com/Z-100/vayan",           img:"/logo171.png"},
-        {name:"Sömi-Weather",   desc:"Stupid stuff",            url:"https://github.com/Z-100/soemi-weather",   img:"/logo171.png"},
-        {name:"GeoPal",         desc:"Geo Reminder App",        url:"https://github.com/ZE-100/GeoPal",         img:"/logo171.png"},
-        {name:"BackFusion",     desc:"Kotlin and Spring Boot", url:"https://github.com/FitFusion/BackFusion",   img:"/logo171.png"},
-        {name:"DayCounter",     desc:"Cute day counter app",    url:"https://github.com/ZE-100/DayCounter",     img:"/logo171.png"},
-    ]
-    // @formatter:on
-
     return (
-        <div className="flex flex-wrap gap-6 p-6">
-            {projects.map((project, index) => (
-                <ProjectContainer key={index}
-                                  name={project.name}
-                                  description={project.desc}
-                                  url={project.url}
-                                  image={project.img}/>
-            ))}
-        </div>
+        <>
+            <h2 className="mt-5 ml-5">Featured Projects</h2>
+            <div className="flex flex-wrap justify-evenly py-6">
+                    {featuredProjectsData.map((project, index) => (
+                        <ProjectSection key={index}
+                                        name={project.name}
+                                        shortDesc={project.shortDesc}
+                                        desc={project.desc}
+                                        url={project.url}
+                                        image={project.img}/>
+                    ))}
+            </div>
+        </>
     )
 }
