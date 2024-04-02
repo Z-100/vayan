@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {routerData} from "../router";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 export const Navbar = () => {
 
-    const [active, setActive] = useState(routerData[0].name)
+    const location = useLocation();
+    const [url, setUrl] = useState('');
+    useEffect(() => {
+        setUrl(location.pathname);
+    }, [location]);
 
     return (
         <>
@@ -12,11 +16,9 @@ export const Navbar = () => {
                 <div className="w-[50%] ml-[25%] h-full flex gap-6 items-center justify-center">
                     {routerData.map(route => (
                         <Link key={route.name}
-                              to={route.path}
-                              onClick={() => setActive(route.name)}
-                              className="">
+                              to={route.path}>
 
-                            <p className={active === route.name ? "font-bold" : "text-light-2"}>{route.name}</p>
+                            <p className={url === route.path ? "font-bold" : "text-light-2"}>{route.name}</p>
                         </Link>
                     ))}
                 </div>
