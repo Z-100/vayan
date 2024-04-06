@@ -9,5 +9,9 @@ export const ProjectsPage = () => {
         <PlannedProjectsContainer/>,
     ];
 
-    return (<>{mapContentContainers(containers)}</>);
+    return (
+        <div className="w-full md:w-[50%] mx-auto">
+            {mapContentContainers(containers)}
+        </div>
+    );
 }

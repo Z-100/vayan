@@ -20,7 +20,7 @@ export const ProjectSection = ({ name, shortDesc, desc, url, image }: ProjectSec
                         <Link to={url}
                               target={"_blank"}
                               className="w-full h-48 object-cover">
-                            <h3 className="text-xl font-bold mb-2">➡️ {name}</h3>
+                            <h3 className="text-xl font-bold py-2 pr-2 hover:underline focus:underline text-link-2 visited:text-link-1">GitHub/{name}</h3>
                         </Link>
                         <p className="text-gray-700 text-base">{shortDesc}</p>
                     </span>
