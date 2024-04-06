@@ -12,7 +12,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className="fixed top-0 w-full bg-dark-1 h-16">
+            <div className="fixed top-0 w-full bg-dark-1 h-16 z-50">
                 <div className="w-[50%] ml-[25%] h-full flex gap-6 items-center justify-center">
                     {routerData.map(route => (
                         <Link key={route.name}
