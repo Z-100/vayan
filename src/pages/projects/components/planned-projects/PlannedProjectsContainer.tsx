@@ -1,6 +1,6 @@
 import React from 'react'
 import {ProjectSection} from "../../../../components";
-import {plannedProjectsData} from "../../../../domain/mock-db/planned-projects-data";
+import {plannedProjectsData} from "../../../../domain";
 
 export const PlannedProjectsContainer = () => {
 
