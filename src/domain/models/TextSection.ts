@@ -1,5 +1,5 @@
 export interface TextSection {
     title: string,
-    text: string,
-    texts?: TextSection[]
+    text: string | string[],
+    subTexts?: TextSection[],
 }

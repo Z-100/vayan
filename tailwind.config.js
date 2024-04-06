@@ -17,6 +17,8 @@ module.exports = {
             'light-1': '#b5b5b5',
             'light-2': '#d5d5d5',
             'light-3': '#f5f5f5',
+            'link-1': '#3f35cf',
+            'link-2': '#356DCF',
         },
         future: {
             hoverOnlyWhenSupported: true,
