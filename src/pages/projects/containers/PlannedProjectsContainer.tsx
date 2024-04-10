@@ -1,6 +1,6 @@
 import React from 'react'
-import {ProjectSection} from "../../../../components";
-import {plannedProjectsData} from "../../../../domain";
+import {ProjectSection} from "../../../components";
+import {plannedProjectsData} from "../../../domain";
 
 export const PlannedProjectsContainer = () => {
 

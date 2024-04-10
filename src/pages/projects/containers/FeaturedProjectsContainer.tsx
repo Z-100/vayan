@@ -1,6 +1,6 @@
 import React from 'react'
-import {ProjectSection} from "../../../../components";
-import {featuredProjectsData} from "../../../../domain";
+import {ProjectSection} from "../../../components";
+import {featuredProjectsData} from "../../../domain";
 
 export const FeaturedProjectsContainer = () => {
 

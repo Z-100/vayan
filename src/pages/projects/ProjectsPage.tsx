@@ -1,5 +1,5 @@
 import React, {JSX} from 'react'
-import {PlannedProjectsContainer, FeaturedProjectsContainer} from "./components";
+import {PlannedProjectsContainer, FeaturedProjectsContainer} from "./containers";
 import {ContentContainer} from "../../components";
 
 export const ProjectsPage = () => {

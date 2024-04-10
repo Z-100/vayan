@@ -1,5 +1,5 @@
 import React, {JSX} from 'react'
-import {AboutMeContainer, AboutWebsiteContainer, SkillsContainer} from "./components";
+import {AboutMeContainer, AboutWebsiteContainer, SkillsContainer} from "./containers";
 import {ContentContainer} from "../../components";
 
 export const HomePage = () => {

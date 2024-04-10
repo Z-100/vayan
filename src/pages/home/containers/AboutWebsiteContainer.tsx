@@ -1,6 +1,6 @@
 import React from 'react'
-import {ContentSection} from "../../../../components";
-import {aboutWebsiteTexts} from "../../../../domain";
+import {ContentSection} from "../../../components";
+import {aboutWebsiteTexts} from "../../../domain";
 
 export const AboutWebsiteContainer = () => {
 
