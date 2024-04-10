@@ -1,14 +1,5 @@
 import {TextSection} from "../models";
 
-export const introTexts: TextSection[] = [
-    {
-        title: 'Hello there',
-        text:
-            'General Keno-...\n' +
-            'Anyway. Thanks for checking in!',
-    },
-]
-
 export const aboutMeTexts: TextSection[] = [
     {
         title: 'Hi there, Marvin here',
