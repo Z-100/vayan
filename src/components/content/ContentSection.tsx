@@ -35,7 +35,7 @@ export const ContentSection = ({textSection, textPos = 'left'}: ContentSectionPr
     if (!textSection.subTexts) {
         return (
             <div className="my-5">
-                <h1 className="mb-2">{textSection.title}</h1>
+                <h2 className="mb-2">{textSection.title}</h2>
                 {mapTextToP(textSection.text, textPos)}
             </div>
         );
@@ -43,11 +43,11 @@ export const ContentSection = ({textSection, textPos = 'left'}: ContentSectionPr
 
     return (
         <div className="my-5">
-            <h1 className="mb-2">{textSection.title}</h1>
+            <h2 className="mb-2">{textSection.title}</h2>
             {mapTextToP(textSection.text, textPos)}
             {textSection.subTexts!.map((text, i) => (
                 <>
-                    <h2 className="mb-1 mt-2">{text.title}</h2>
+                    <h3 className="mb-1 mt-2">{text.title}</h3>
                     {mapTextToP(text.text, textPos)}
                 </>
             ))}
