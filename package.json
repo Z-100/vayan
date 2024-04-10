@@ -14,7 +14,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.2",
+    "@types/node": "^20.12.5",
     "@types/react-dom": "^18.2.7",
     "@vercel/node": "^3.0.25",
     "@vercel/postgres": "^0.7.2",
@@ -32,11 +32,11 @@
     "@types/aos": "^3.0.4",
     "@types/bootstrap": "^5.2.6",
     "@types/react": "^18.2.14",
-    "@types/react-bootstrap": "^0.32.32",
+    "@types/react-bootstrap": "^0.32.36",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.38",
     "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
+    "postcss-import": "^16.1.0",
     "tailwindcss": "^3.3.2"
   },
   "eslintConfig": {
