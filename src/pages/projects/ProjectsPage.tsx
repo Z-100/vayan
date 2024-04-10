@@ -1,6 +1,6 @@
 import React, {JSX} from 'react'
 import {PlannedProjectsContainer, FeaturedProjectsContainer} from "./components";
-import {mapContentContainers} from "../../domain";
+import {ContentContainer} from "../../components";
 
 export const ProjectsPage = () => {
 
@@ -10,8 +10,8 @@ export const ProjectsPage = () => {
     ];
 
     return (
-        <div className="w-full md:w-[50%] mx-auto">
-            {mapContentContainers(containers)}
-        </div>
+        <>
+            <ContentContainer containers={containers}/>
+        </>
     );
 }

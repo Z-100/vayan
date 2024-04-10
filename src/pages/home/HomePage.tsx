@@ -1,6 +1,6 @@
 import React, {JSX} from 'react'
 import {AboutMeContainer, AboutWebsiteContainer, SkillsContainer} from "./components";
-import {mapContentContainers} from "../../domain";
+import {ContentContainer} from "../../components";
 
 export const HomePage = () => {
 
@@ -20,9 +20,7 @@ export const HomePage = () => {
                     <h2 className="text-4xl md:text-5xl mt-5 hover:drop-shadow-2xl">Swiss Backend Dev</h2>
                 </span>
             </div>
-            <div className="w-full md:w-[50%] mx-auto">
-                {mapContentContainers(containers)}
-            </div>
+            <ContentContainer containers={containers}/>
         </div>
     );
 }
