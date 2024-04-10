@@ -4,7 +4,7 @@ export const aboutMeTexts: TextSection[] = [
     {
         title: 'Hi there, Marvin here',
         text: 'I\'m a backend dev from Switzerland, the land of the cows and the cheese and the more cows',
-        subTexts: [
+        subSection: [
             {
                 title: 'Stuff I like',
                 text: [
@@ -47,7 +47,7 @@ export const skillsTexts: TextSection[] = [
     {
         title: 'Tech stack',
         text: 'A rough overview of the stuff I\'ve used so far',
-        subTexts: [
+        subSection: [
             {
                 title: 'Java',
                 text: [

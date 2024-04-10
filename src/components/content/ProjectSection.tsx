@@ -18,7 +18,7 @@ export const ProjectSection = ({ project }: ProjectSectionProps) => {
                          className="mr-5 w-20 h-20 rounded-lg"/>
                     <span>
                         <Link to={url}
-                              target={"_blank"}
+                              target="_blank"
                               className="w-full h-48 object-cover">
                             <h3 className="text-xl font-bold py-2 pr-2 hover:underline focus:underline text-link-2 visited:text-link-1">GitHub/{name}</h3>
                         </Link>

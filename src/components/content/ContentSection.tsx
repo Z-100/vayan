@@ -10,12 +10,11 @@ interface ContentSectionProps {
 
 export const ContentSection = ({textSection, textPos = 'left'}: ContentSectionProps) => {
 
+    function mapTextToParagraph(text: string | string[], textPos: TextPos): JSX.Element {
 
-    function mapTextToP(text: string | string[], textPos: TextPos): JSX.Element {
-
-        if (typeof text !== 'string') {
+        if (Array.isArray(text)) {
             return (
-                <ul className="mb-8 ml-5 list-disc">
+                <ul className="mb-8 ml-6 list-disc">
                     {text?.map((li, index) => (
                         <li key={index} className="mb-2">{li}</li>
                     ))}
@@ -32,26 +31,16 @@ export const ContentSection = ({textSection, textPos = 'left'}: ContentSectionPr
         );
     }
 
-    if (!textSection.subTexts) {
-        return (
-            <div className="my-5">
-                <h2 className="mb-2">{textSection.title}</h2>
-                {mapTextToP(textSection.text, textPos)}
-            </div>
-        );
-    }
-
     return (
         <div className="my-5">
             <h2 className="mb-2">{textSection.title}</h2>
-            {mapTextToP(textSection.text, textPos)}
-            {textSection.subTexts!.map((text, i) => (
-                <>
-                    <h3 className="mb-1 mt-2">{text.title}</h3>
-                    {mapTextToP(text.text, textPos)}
-                </>
+            {mapTextToParagraph(textSection.text, textPos)}
+            {textSection.subSection && textSection.subSection.map((subSection, i) => (
+                <span key={i}>
+                    <h3 className="mb-1 mt-2">{subSection.title}</h3>
+                    {mapTextToParagraph(subSection.text, textPos)}
+                </span>
             ))}
         </div>
     );
 }
-
