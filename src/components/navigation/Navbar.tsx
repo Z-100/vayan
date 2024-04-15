@@ -14,12 +14,12 @@ export const Navbar = () => {
     return (
         <>
             <div className="fixed top-0 w-full bg-dark-1 h-16 z-50">
-                <div className="w-[50%] ml-[25%] h-full flex gap-6 items-center justify-center">
+                <div className="w-[50%] ml-[25%] h-full flex gap-2 items-center justify-center text-lg">
                     {getRouterData(RouteGroup.NAVBAR).map(route => (
                         <Link key={route.name}
                               to={route.path}>
 
-                            <p className={url === route.path ? "font-bold" : "text-light-2"}>{route.name}</p>
+                            <p className={`hover:text-light-3 transition-colors px-3 ${url === route.path ? "font-medium text-light-3" : "text-light-2"}`}>{route.name}</p>
                         </Link>
                     ))}
                 </div>
