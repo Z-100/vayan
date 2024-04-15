@@ -1,6 +1,8 @@
 import React from 'react'
-import {socialMediaElements} from "../../domain";
+import {RouteGroup, socialMediaElements} from "../../domain";
 import {ContactFormContainer} from "./contact";
+import {Link} from "react-router-dom";
+import {getRouterData} from "../router";
 
 export const Footer = () => {
 
@@ -18,7 +20,18 @@ export const Footer = () => {
                 ))}
             </ul>
             <ContactFormContainer/>
-            <p className="text-light-2 mt-5">© Copyright 2024 Z-100</p>
+            <div className="my-2 mt-3 flex flex-row">
+                {getRouterData(RouteGroup.FOOTER).map((route, index) => (
+                    <span className="px-2">
+                        <Link key={route.name}
+                              to={route.path}>
+
+                            <p className="text-light-1 hover:text-light-2 transition-colors">{route.name}</p>
+                        </Link>
+                    </span>
+                ))}
+            </div>
+            <p className="text-light-2">© Copyright 2024 Z-100</p>
         </div>
     )
 }
