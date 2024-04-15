@@ -93,3 +93,21 @@ export const skillsTexts: TextSection[] = [
         ],
     },
 ]
+
+export const privacyPolicyTexts: TextSection[] = [
+    {
+        title: 'Website Analytics Statement for Vayan',
+        text: 'Vayan utilizes web analytics provided by Vercel solely for personal purposes and to better understand its usage.\n' +
+            ' This analytics service is integrated directly into Vayan by Vercel - Vayan\'s hosting provider - and does not transmit any data externally to third parties nor does it use any cookies.\n' +
+            '\n' +
+            'The use of web analytics is intended to gather insights into how visitors interact with Vayan, such as which pages are most popular, how long visitors stay on each page, and how they navigate through our site.\n' +
+            'This information helps improving the user experience and tailor the content to better meet the needs of Vayan\'s audience.\n' +
+            '\n' +
+            'Rest assured that the data collected through the use of Vercel\'s built-in analytics is anonymized and aggregated, meaning it cannot be used to identify individual users.\n' +
+            'Additionally, this data is not shared with any other parties and is not used for any other purposes beyond improving this website.\n' +
+            '\n' +
+            'If you have any questions or concerns about our use of web analytics on Vayan, please don\'t hesitate using the contact form.\n' +
+            '\n' +
+            'Thank you for visiting Vayan!',
+    }
+]
