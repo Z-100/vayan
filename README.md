@@ -1,6 +1,6 @@
-# Vayan - CV page
+# Vayan - Personal Website
 
-I'm not a React- nor frontend-dev, but I'm trying my best :)
+It's hosted on the web of the world wide: [vayan.zindustries.ch](https://vayan.zindustries.ch)
 
 ## Run the app
 
@@ -9,14 +9,15 @@ I'm not a React- nor frontend-dev, but I'm trying my best :)
 > npm i
 > npm run start
 ```
+
 ## Checklist
 
-| Status          | Thing           |
-|:---------------:|:----------------|
-| :x:             | Define content  |
-| :x:             | Write content   |
-| :x:             | Make pretty     |
-| :grey_question: | Dynamic content |
+| Status | Thing           |
+|:------:|:----------------|
+|   ✅    | Define content  |
+|   ✅    | Write content   |
+|   ✅    | Make pretty     |
+|   ❔    | Dynamic content |
 
 ## Future stuff
 

@@ -1,12 +1,11 @@
 import React, {JSX} from 'react'
-import {PlannedProjectsContainer, FeaturedProjectsContainer} from "./containers";
 import {ContentContainer} from "../../components";
+import {PrivacyPolicyContainer} from "./containers";
 
-export const ProjectsPage = () => {
+export const PrivacyPolicyPage = () => {
 
     const containers: JSX.Element[] = [
-        <FeaturedProjectsContainer/>,
-        <PlannedProjectsContainer/>,
+        <PrivacyPolicyContainer />,
     ];
 
     return (

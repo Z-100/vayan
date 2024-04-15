@@ -1,24 +1,24 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import {Project} from "../../domain";
 
 interface ProjectSectionProps {
-    name: string,
-    shortDesc: string,
-    desc: string,
-    url: string,
-    image: string,
+    project: Project;
 }
-export const ProjectSection = ({ name, shortDesc, desc, url, image }: ProjectSectionProps) => {
+export const ProjectSection = ({ project }: ProjectSectionProps) => {
+
+    const { name, shortDesc, desc, url, img } = project;
+
     return (
         <>
             <div className="p-4 m-2 bg-dark-4 border-[1px] border-light-0 w-96 h-min-48 rounded-lg shadow-md overflow-hidden hover:bg-dark-5 transition">
                 <span className="flex">
-                    <img src={image}
+                    <img src={img}
                          alt={name}
                          className="mr-5 w-20 h-20 rounded-lg"/>
                     <span>
                         <Link to={url}
-                              target={"_blank"}
+                              target="_blank"
                               className="w-full h-48 object-cover">
                             <h3 className="text-xl font-bold py-2 pr-2 hover:underline focus:underline text-link-2 visited:text-link-1">GitHub/{name}</h3>
                         </Link>
