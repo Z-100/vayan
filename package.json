@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.0.16",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.8",
