@@ -4,12 +4,12 @@ WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json package-lock.json ./
 
-RUN npm i --silent
-RUN npm i -g server --silent
+RUN npm ci --silent && npm i -g serve --silent
 
-COPY .. ./
+COPY . .
+
+RUN npm run build
 
 CMD ["serve", "-s", "build"]
