@@ -32,7 +32,7 @@ export const Footer = () => {
                     </span>
                 ))}
             </div>
-            <p className="text-light-2">© Copyright 2024 Z-100</p>
+            <p className="text-light-2">© Copyright 2024-&#8734; Z-100</p>
         </div>
     )
 }
