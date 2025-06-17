@@ -3,6 +3,7 @@ import './index.css'
 import {BrowserRouter} from 'react-router-dom';
 import {Footer, Navbar, Router, ScrollToTop} from './components';
 import {inject} from "@vercel/analytics";
+import {BackgroundProvider} from "./components/background/BackgroundProvider";
 
 inject();
 
@@ -13,7 +14,10 @@ function App() {
             <ScrollToTop/>
             <div className="flex flex-col min-h-screen justify-between items-center">
                 <Navbar/>
-                <Router/>
+                <BackgroundProvider/>
+                <div className="w-full pt-24 md:pt-72">
+                    <Router/>
+                </div>
                 <Footer/>
             </div>
         </BrowserRouter>

@@ -6,7 +6,7 @@
     html, body {
         margin: 0;
         padding: 0;
-        background-color: theme('colors.dark-2');
+        /*background-color: theme('colors.dark-2');*/
         font-family: 'Montserrat', serif;
         color: theme('colors.light-3');
     }
