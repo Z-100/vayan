@@ -1,6 +1,7 @@
 import {RouteType} from "../models";
 
 type GroupedRoutes = Record<string, RouteType[]>
+
 export function groupRoutes(routes: RouteType[]): GroupedRoutes {
 
     return routes.reduce((groupedRoutes, route) => {

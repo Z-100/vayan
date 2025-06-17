@@ -12,7 +12,7 @@ export const HomePage = () => {
 
     return (
         <div className="w-full">
-            <div className="relative pb-72 md:pb-48">
+            <div className="relative pt-24 md:mt-44 pb-72 md:pb-48">
                 <span className="absolute top-1/2 md:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <h1 className="text-7xl md:text-9xl font-bold">Z-100</h1>
                     <h2 className="text-4xl md:text-5xl mt-5 hover:drop-shadow-2xl">Swiss Backend Dev</h2>

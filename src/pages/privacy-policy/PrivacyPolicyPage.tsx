@@ -5,7 +5,7 @@ import {PrivacyPolicyContainer} from "./containers";
 export const PrivacyPolicyPage = () => {
 
     const containers: JSX.Element[] = [
-        <PrivacyPolicyContainer />,
+        <PrivacyPolicyContainer/>,
     ];
 
     return (

@@ -62,9 +62,9 @@ export function pureCrappyNoise(x: number, y: number): number {
     return (lerp(x1, x2, v) + 1) / 2;
 }
 
-const lerp = (a: number, b: number, t: number)=> a + t * (b - a);
+const lerp = (a: number, b: number, t: number) => a + t * (b - a);
 
-const fade = (f: number) =>  f * f * f * (f * (f * 6 - 15) + 10);
+const fade = (f: number) => f * f * f * (f * (f * 6 - 15) + 10);
 
 const grad = (hash: number, x: number, y: number) => {
     let h = hash & 15;

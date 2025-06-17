@@ -1,5 +1,5 @@
 import React, {JSX} from 'react'
-import {PlannedProjectsContainer, FeaturedProjectsContainer} from "./containers";
+import {FeaturedProjectsContainer, PlannedProjectsContainer} from "./containers";
 import {ContentContainer} from "../../components";
 
 export const ProjectsPage = () => {
@@ -10,8 +10,8 @@ export const ProjectsPage = () => {
     ];
 
     return (
-        <>
+        <div className="pt-14 md:mt-24">
             <ContentContainer containers={containers}/>
-        </>
+        </div>
     );
 }

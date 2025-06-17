@@ -15,9 +15,7 @@ function App() {
             <div className="flex flex-col min-h-screen justify-between items-center">
                 <Navbar/>
                 <BackgroundProvider/>
-                <div className="w-full pt-24 md:pt-72">
-                    <Router/>
-                </div>
+                <Router/>
                 <Footer/>
             </div>
         </BrowserRouter>

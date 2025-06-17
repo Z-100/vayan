@@ -1,4 +1,4 @@
-import React, {useEffect, useRef } from 'react'
+import React, {useEffect, useRef} from 'react'
 import {crappyNoise, crappyNoiseToColor} from "../../../domain";
 
 
@@ -40,5 +40,5 @@ export const Perlin2DContainer = () => {
         }
     }, [])
 
-    return <canvas ref={canvasRef} id="canvas" className="w-full h-full border-red" />;
+    return <canvas ref={canvasRef} id="canvas" className="w-full h-full border-red"/>;
 }
