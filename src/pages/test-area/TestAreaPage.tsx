@@ -1,11 +1,11 @@
 import React, {JSX} from 'react'
 import {ContentContainer} from "../../components";
-import {PrivacyPolicyContainer} from "./containers";
+import {Perlin2DContainer} from "./containers";
 
-export const PrivacyPolicyPage = () => {
+export const TestAreaPage = () => {
 
     const containers: JSX.Element[] = [
-        <PrivacyPolicyContainer/>,
+        <Perlin2DContainer/>,
     ];
 
     return (

@@ -2,7 +2,7 @@ import {TextSection} from "../models";
 
 export const aboutMeTexts: TextSection[] = [
     {
-        title: 'Hi there, Marvin here',
+        title: 'Hi there, Marin here',
         text: 'I\'m a backend dev from Switzerland, the land of the cows and the cheese and the more cows',
         subSection: [
             {
@@ -12,15 +12,15 @@ export const aboutMeTexts: TextSection[] = [
                     'Programming',
                     'Games',
                     'Programming Games',
-                    'Food (non cheesey stuff as well)',
+                    'Food (non cheesy stuff as well)',
                 ]
             },
             {
                 title: 'I am...',
                 text: [
                     '...a passionate backend developer in love with Spring Boot',
+                    '...experimenting with OpenGL, Android Apps & Unity',
                     '...trying my best with Vayan in the web',
-                    '...experimenting with Android apps, Arduino & Unity',
                     '...looking for jobs (there\'s a contact form)',
                     '...constantly learning new stuff',
                 ]
@@ -35,10 +35,10 @@ export const aboutWebsiteTexts: TextSection[] = [
         text:
             'TL;DR: Backend dev doing frontend\n' +
             '\n' +
-            'I\'m a passionate backend developer in need of a website.\n' +
+            'I\'m a anything-but-UI developer in need of a website.\n' +
             'And what better way is there to cut costs - I mean to learn new stuff - than by doing it myself?\n' +
             '\n' +
-            'Basically, I\'m a backend dev who is currently learning how to frontend.\n' +
+            'This is part CV, part learning experience on how to frontend.\n' +
             'So don\'t judge Vayan too hard :)',
     },
 ]
@@ -57,6 +57,14 @@ export const skillsTexts: TextSection[] = [
                 ],
             },
             {
+                title: 'Special interests / Side projects',
+                text: [
+                    'C along OpenGL to create my own whatever-engine',
+                    'C# along Unity, for... well, Unity Games',
+                    'C++ for an Arduino/M5Stack project',
+                ],
+            },
+            {
                 title: 'Kotlin',
                 text: [
                     'Easily my favourite language',
@@ -71,13 +79,6 @@ export const skillsTexts: TextSection[] = [
                     'React/Typescript',
                     'JavaScript, HTML, CSS',
                     'PHP',
-                ],
-            },
-            {
-                title: 'Other languages',
-                text: [
-                    'C# along Unity, for... well, Unity Games',
-                    'C++ for an Arduino/M5Stack project',
                 ],
             },
             {

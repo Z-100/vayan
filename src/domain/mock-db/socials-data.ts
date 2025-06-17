@@ -1,5 +1,5 @@
 import {SocialMediaElement} from "../models";
-import {FaGithub, FaLinkedin, FaReact, FaStackOverflow} from "react-icons/fa";
+import {FaGithub} from "react-icons/fa";
 
 export const socialMediaElements: SocialMediaElement[] = [
     {
@@ -8,23 +8,23 @@ export const socialMediaElements: SocialMediaElement[] = [
         icon: FaGithub,
     },
     {
-        name: "Professional GitHub",
-        url: "https://github.com/ZE-100",
+        name: "GitHub",
+        url: "https://github.com/Z-100",
         icon: FaGithub,
     },
     {
-        name: "LinkedIn",
-        url: "https://linkedin.com/in/marvin-z",
-        icon: FaLinkedin,
+        name: "GitHub",
+        url: "https://github.com/Z-100",
+        icon: FaGithub,
     },
     {
-        name: "StackOverflow",
-        url: "https://stackoverflow.com/users/14442758/z-100",
-        icon: FaStackOverflow,
+        name: "GitHub",
+        url: "https://github.com/Z-100",
+        icon: FaGithub,
     },
     {
-        name: "Website",
-        url: "https://vayan.zindustries.ch",
-        icon: FaReact,
+        name: "GitHub",
+        url: "https://github.com/Z-100",
+        icon: FaGithub,
     },
 ];

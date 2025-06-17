@@ -5,13 +5,15 @@ import {Project} from "../../domain";
 interface ProjectSectionProps {
     project: Project;
 }
-export const ProjectSection = ({ project }: ProjectSectionProps) => {
 
-    const { name, shortDesc, desc, url, img } = project;
+export const ProjectSection = ({project}: ProjectSectionProps) => {
+
+    const {name, shortDesc, desc, url, img} = project;
 
     return (
         <>
-            <div className="p-4 m-2 bg-dark-4 border-[1px] border-light-0 w-96 h-min-48 rounded-lg shadow-md overflow-hidden hover:bg-dark-5 transition">
+            <div
+                className="p-4 m-2 bg-dark-4 border-[1px] border-light-0 w-96 h-min-48 rounded-lg shadow-md overflow-hidden bg-opacity-50 md:bg-opacity-50 hover:bg-opacity-70 hover:bg-dark-5 transition">
                 <span className="flex">
                     <img src={img}
                          alt={name}
