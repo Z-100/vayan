@@ -9,6 +9,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    target-branch: "develop"
+    target-branch: "dependabot"
     reviewers:
       - "Z-100"
