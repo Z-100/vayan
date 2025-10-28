@@ -1,7 +1,5 @@
 # Vayan - Personal Website
 
-It's hosted on the web of the world wide: [vayan.zindustries.ch](https://vayan.zindustries.ch)
-
 ## Run the app
 
 ```shell
