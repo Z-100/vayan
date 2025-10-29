@@ -1,7 +1,7 @@
 import {RouteGroup, RouteType} from "../../domain";
 import React from "react";
-import {HomePage, PrivacyPolicyPage, ProjectsPage, TestAreaPage} from "../../pages";
-import {BiCalculator, BiHomeHeart,} from "react-icons/bi";
+import {HomePage, PrivacyPolicyPage, ProjectsPage, ProjectsY5Page} from "../../pages";
+import {BiHomeHeart} from "react-icons/bi";
 
 export function getRouterData(group?: RouteGroup) {
     return group ? routerData.filter(it => it.group === group) : routerData;
@@ -23,11 +23,11 @@ const routerData: RouteType[] = [
         group: RouteGroup.NAVBAR,
     },
     {
-        path: "/test-area",
-        element: <TestAreaPage/>,
-        name: "Tests",
-        icon: BiCalculator,
-        group: RouteGroup.NAVBAR,
+        path: "projects/y5",
+        element: <ProjectsY5Page/>,
+        name: "y5",
+        icon: BiHomeHeart,
+        group: RouteGroup.NAVBAR
     },
     {
         path: "/privacy-policy",

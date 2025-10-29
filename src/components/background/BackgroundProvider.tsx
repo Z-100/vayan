@@ -7,13 +7,11 @@ export const BackgroundProvider = () => {
     const mountRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(90, 1, 1, 100);
-        camera.position.set(10, 10, 10)
+        camera.position.set(10, 10, 10);
 
         const renderer = new THREE.WebGLRenderer();
-
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         renderer.setSize(windowWidth, windowHeight);
@@ -33,12 +31,12 @@ export const BackgroundProvider = () => {
         mesh.rotation.x = -Math.PI / 2;
         scene.add(mesh);
 
-        const light = new THREE.DirectionalLight(0xffffff, 0.75);
+        const light = new THREE.DirectionalLight(0xFFFFFF, 0.75);
         light.position.set(0, 10, 1);
         scene.add(light);
 
-        geometry.attributes.position.needsUpdate = true;
         const pos = geometry.attributes.position;
+        pos.needsUpdate = true;
 
         const width = 256;
         const height = 256;
@@ -48,8 +46,8 @@ export const BackgroundProvider = () => {
 
         const onMouseMove = (e: MouseEvent) => {
             const rect = mountRef.current!.getBoundingClientRect();
-            mouseX = (e.clientX - rect.left) / rect.width;  // 0 to 1
-            mouseY = (e.clientY - rect.top) / rect.height;  // 0 to 1
+            mouseX = (e.clientX - rect.left) / rect.width;
+            mouseY = (e.clientY - rect.top) / rect.height;
         };
 
         window.addEventListener("mousemove", onMouseMove);
@@ -57,20 +55,27 @@ export const BackgroundProvider = () => {
         window.addEventListener("resize", () => {
             const width = window.innerWidth;
             const height = window.innerHeight;
-
             renderer.setSize(width, height);
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
         });
 
-        const animate = () => {
+        const clock = new THREE.Clock();
+        let autoX = 0;
+        let autoY = 0;
 
+        const animate = () => {
             requestAnimationFrame(animate);
 
-            const zoomScale = Math.min(Math.max(30 / Math.abs(mouseY), 20), 75) * 0.75;
+            const delta = clock.getDelta();
 
-            const xOffset = mouseX / 2 + 100;
-            const yOffset = mouseY / 2 + 100;
+            autoX += delta * 0.1;
+            autoY += delta * -0.05;
+
+            const zoomScale = Math.min(Math.max(30 / Math.abs(mouseY || 0.1), 20), 75) * 0.75;
+
+            const xOffset = (mouseX / 2 + 100) + autoX;
+            const yOffset = (mouseY / 2 + 100) + autoY;
 
             const amplifier = 10;
 
@@ -94,4 +99,4 @@ export const BackgroundProvider = () => {
     }, []);
 
     return <div ref={mountRef} id="canvas-3d" className="fixed inset-0 z-[-1] pointer-events-none"/>;
-}
+};
