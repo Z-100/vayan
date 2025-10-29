@@ -1,5 +1,6 @@
 export * from './CardContent'
 export * from './GithubRepository'
+export * from './Image'
 export * from './Project'
 export * from './RouteGroup'
 export * from './RouteType'
