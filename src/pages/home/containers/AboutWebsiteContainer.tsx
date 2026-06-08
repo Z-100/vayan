@@ -8,7 +8,7 @@ export const AboutWebsiteContainer = () => {
         <>
             {aboutWebsiteTexts.map(section => (
                 <ContentSection textSection={section}
-                                textPos={"right"}/>
+                                textPos={"left"}/>
             ))}
         </>
     )
