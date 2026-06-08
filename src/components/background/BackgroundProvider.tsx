@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef} from 'react';
 import * as THREE from 'three';
 import {crappyNoise} from "../../domain";
 
@@ -7,6 +7,9 @@ export const BackgroundProvider = () => {
     const mountRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
+        const currentMount = mountRef.current;
+        if (!currentMount) return;
+
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(90, 1, 1, 100);
         camera.position.set(10, 10, 10);
@@ -19,7 +22,7 @@ export const BackgroundProvider = () => {
         camera.aspect = windowWidth / windowHeight;
         camera.updateProjectionMatrix();
 
-        mountRef.current!.appendChild(renderer.domElement);
+        currentMount.appendChild(renderer.domElement);
 
         const geometry = new THREE.PlaneGeometry(60, 60, 100, 100);
         const material = new THREE.MeshStandardMaterial({
@@ -45,27 +48,30 @@ export const BackgroundProvider = () => {
         let mouseY = 0;
 
         const onMouseMove = (e: MouseEvent) => {
-            const rect = mountRef.current!.getBoundingClientRect();
+            if (!currentMount) return;
+            const rect = currentMount.getBoundingClientRect();
             mouseX = (e.clientX - rect.left) / rect.width;
             mouseY = (e.clientY - rect.top) / rect.height;
         };
 
-        window.addEventListener("mousemove", onMouseMove);
-
-        window.addEventListener("resize", () => {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            renderer.setSize(width, height);
-            camera.aspect = width / height;
+        const onResize = () => {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            renderer.setSize(w, h);
+            camera.aspect = w / h;
             camera.updateProjectionMatrix();
-        });
+        };
+
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("resize", onResize);
 
         const clock = new THREE.Clock();
         let autoX = 0;
         let autoY = 0;
+        let animationFrameId: number;
 
         const animate = () => {
-            requestAnimationFrame(animate);
+            animationFrameId = requestAnimationFrame(animate);
 
             const delta = clock.getDelta();
 
@@ -94,7 +100,16 @@ export const BackgroundProvider = () => {
 
         return () => {
             window.removeEventListener("mousemove", onMouseMove);
-            mountRef.current?.removeChild(renderer.domElement);
+            window.removeEventListener("resize", onResize);
+            cancelAnimationFrame(animationFrameId);
+
+            if (currentMount && renderer.domElement) {
+                currentMount.removeChild(renderer.domElement);
+            }
+
+            geometry.dispose();
+            material.dispose();
+            renderer.dispose();
         };
     }, []);
 

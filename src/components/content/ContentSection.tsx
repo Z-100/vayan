@@ -10,7 +10,7 @@ interface ContentSectionProps {
 
 export const ContentSection = ({textSection, textPos = 'left'}: ContentSectionProps) => {
 
-    function mapTextToParagraph(text: string | string[], textPos: TextPos): JSX.Element {
+    function mapTextToParagraph(text: string | string[], textPos: TextPos): React.JSX.Element {
 
         if (Array.isArray(text)) {
             return (
