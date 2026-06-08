@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ContentContainerProps {
-    containers: JSX.Element[]
+    containers: React.JSX.Element[]
 }
 
 export const ContentContainer = ({containers}: ContentContainerProps) => {
