@@ -1,12 +1,12 @@
 import React from 'react'
 import {ContentSection} from "../../../components";
-import {aboutMeTexts} from "../../../domain";
+import {y5DescriptionTexts} from "../../../domain";
 
-export const AboutMeContainer = () => {
+export const Y5DescriptionContainer = () => {
 
     return (
         <>
-            {aboutMeTexts.map(section => (
+            {y5DescriptionTexts.map(section => (
                 <ContentSection textSection={section}
                                 textPos={"left"}/>
             ))}

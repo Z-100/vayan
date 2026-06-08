@@ -53,30 +53,30 @@ export const skillsTexts: TextSection[] = [
                 text: [
                     'I started writing Java back in 2021 and have been using it ever since',
                     'Both professionally and for my own projects',
+                    'In the past few years especially \'low-level\', with less frameworks',
                     'It\'s a good language, and I like it, but...',
+                    'I also discovered Kotlin, which I used for both Android and Spring Boot',
                 ],
+            },
+            {
+                title: 'C & OpenGL',
+                text: [
+                    'Currently C is easily my favourite language :P',
+                    'I use it alongside OpenGL (and some C++) to create my very own game engine',
+                    'This is also where my current focus lays on, and where I invest my free time',
+                ]
             },
             {
                 title: 'Special interests / Side projects',
                 text: [
-                    'C along OpenGL to create my own whatever-engine',
                     'C# along Unity, for... well, Unity Games',
                     'C++ for an Arduino/M5Stack project',
                 ],
             },
             {
-                title: 'Kotlin',
-                text: [
-                    'Easily my favourite language',
-                    'Mostly, I\'ve used Kotlin for Android apps',
-                    'But as time went on, I started using it in other use cases as well, e.g. Spring Boot',
-                    'Going forward I definitely wanna improve my skills in that language!',
-                ],
-            },
-            {
                 title: 'Web development',
                 text: [
-                    'React/Typescript',
+                    'React, Typescript',
                     'JavaScript, HTML, CSS',
                     'PHP',
                 ],
@@ -86,9 +86,10 @@ export const skillsTexts: TextSection[] = [
                 text: [
                     'Git, GitHub, GitLab, BitBucket',
                     'Jira, GitHub Projects',
-                    'IntelliJ, VSCode, Ubuntu',
-                    'GitHub Actions, GitLab CI',
-                    'Kubernetes (learning)',
+                    'IntelliJ, VSCode, SSMS, Azure Data Studio',
+                    'GitHub Actions, GitLab CI, ArgoCD',
+                    'OpenShift, Kubernetes',
+                    'Fedora, Ubuntu (server)'
                 ],
             },
         ],

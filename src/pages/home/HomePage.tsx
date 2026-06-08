@@ -6,8 +6,8 @@ export const HomePage = () => {
 
     const containers: JSX.Element[] = [
         <AboutMeContainer/>,
-        <AboutWebsiteContainer/>,
         <SkillsContainer/>,
+        <AboutWebsiteContainer/>,
     ];
 
     return (

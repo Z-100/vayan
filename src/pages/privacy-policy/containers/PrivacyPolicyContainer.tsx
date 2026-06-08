@@ -8,7 +8,7 @@ export const PrivacyPolicyContainer = () => {
         <>
             {privacyPolicyTexts.map(section => (
                 <ContentSection textSection={section}
-                                textPos={"right"}/>
+                                textPos={"left"}/>
             ))}
         </>
     )
