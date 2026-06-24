@@ -37,6 +37,11 @@ export const y5DescriptionTexts: TextSection[] = [
 
 export const y5ImageData: Image[] = [
     {
+        name: 'y5 - 2026-06',
+        shortDesc: 'y5 "Engine" state in June\nPost (but obv also during...) exam season we finally got a working ECS and a crappy spawner :3',
+        url: 'https://raw.githubusercontent.com/Z-100/y5/main/doc/y5-demo-20260624.png',
+    },
+    {
         name: 'y5 - 2026-05',
         shortDesc: 'y5 "Engine" state in May\nAfter a little break for school stuff we not only have Audio, but also: Components :)',
         url: 'https://raw.githubusercontent.com/Z-100/y5/main/doc/y5-demo-202605.png',
