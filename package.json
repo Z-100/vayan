@@ -43,7 +43,7 @@
     "@types/react": "^19.2.17",
     "@types/react-bootstrap": "^1.1.0",
     "autoprefixer": "^10.5.0",
-    "postcss": "^8.5.15"
+    "postcss": "^8.5.18"
   },
   "eslintConfig": {
     "extends": [
